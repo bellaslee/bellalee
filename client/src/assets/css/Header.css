@@ -1,0 +1,12 @@
+.header img {
+  width: 33.3%;
+  position: absolute;
+  left: 16.6%;
+  bottom: 14.2%
+}
+
+.header .content {
+  position: absolute;
+  left: 48.2%;
+  top: 10.2%;
+}
