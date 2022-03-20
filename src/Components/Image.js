@@ -30,7 +30,7 @@ class Image extends React.Component {
     }
 
     if (bottom < 0 || top >= (window.innerHeight || document.documentElement.clientHeight)) {
-      this.setState({active:false});
+      this.setState({ active: false });
     }
   }
 

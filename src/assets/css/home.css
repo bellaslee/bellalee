@@ -12,6 +12,29 @@
   bottom: 14.2%;
 }
 
+.bee {
+  visibility: hidden;
+}
+
+.bee.active {
+  visibility: visible;
+  animation: fly 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes fly {
+   0% { 
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(100px, -300px) scale(0.5);
+  }
+  100% { 
+    transform: translate(0px, -0px) scale(0.3);
+  }
+}
+
 #home-header .content {
   position: absolute;
   left: 48.2%;
@@ -21,39 +44,117 @@
 #home-about img {
   width: 55%;
   position: absolute;
-  transition: 3s;
 }
 
 .girl {
   bottom: 0px;
-  right: 0px;
+  right: -500px;
 }
 
+.girl.active {
+  animation: girlMoveLeft 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes girlMoveLeft {
+  0% { 
+      transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-500px, 0px);
+  }
+  100% { 
+    transform: translate(0px, 0px);
+  }
+}
 
 .small-stars-left {
   bottom: -50px;
-  right: -100px;
-  transition-delay: 0.5s;
+  right: -200px;
+  transform: scale(0.3);
+  opacity: 0;
 }
 
 .small-stars-left.active {
-  transform: translate(-100px, -50px);
+  animation: smallMoveLeft 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
 
-.small-stars-right {
-  bottom: 0px;
-  right: 0px;
+@keyframes smallMoveLeft {
+  0% { 
+    transform: translate(0px, 0px) scale(0.3);
+  }
+  50% {
+    transform: translate(-200px, -50px) scale(1);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(0px, -0px) scale(0.3);
+    opacity: 0;
+  }
 }
 
 .big-star {
-  bottom: 50px;
+  bottom: -300px;
   right: -200px;
-  transition-delay: 1s;
+  transform: scale(0.3);
+  opacity: 0;
 }
 
 .big-star.active {
-  transform: translate(-200px, 50px);
+  animation: bigMoveLeft 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
+
+@keyframes bigMoveLeft {
+  0% { 
+    transform: translate(0px, 0px) scale(0.3);
+  }
+  15% {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-200px, -300px) scale(1);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% { 
+    transform: translate(0px, -0px) scale(0.3);
+  }
+}
+
+.small-stars-right {
+  bottom: -100px;
+  right: 100px;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.small-stars-right.active {
+  animation: smallMoveRight 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes smallMoveRight {
+  0% { 
+    transform: translate(0px, 0px) scale(0.5);
+  }
+  50% {
+    transform: translate(100px, -100px) scale(1);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(0px, -0px) scale(0.5);
+    opacity: 0;
+  }
+}
+
 
 #home-about .content {
   width: 28.2%;

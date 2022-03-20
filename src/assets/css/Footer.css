@@ -4,6 +4,7 @@ Styling for footer only.
 
 #footer {
   font-size: 24px;
+  flex-direction: column;
 }
 
 #footer h2 {
@@ -11,9 +12,9 @@ Styling for footer only.
   margin-bottom: 43px;
 }
 
-#footer img {
+.touch {
   width: 47.5%;
-  rotate: -4.63deg;
+  transform: rotate(-4.63deg);
   margin-left: -149px;
 }
 
@@ -37,4 +38,29 @@ Styling for footer only.
 
 #footer a:visited {
   color: inherit;
+}
+
+.copyright {
+  font-size: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+.touch.active {
+  animation: skew 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes skew {
+  0% { 
+    transform: skew(0);
+  }
+  50% {
+    transform: skew(-10deg, -30deg) scale(0.75);
+  }
+  100% { 
+    transform: skew(0);
+  }
 }

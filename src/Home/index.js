@@ -3,7 +3,7 @@ import '../assets/css/home.css';
 import React from 'react';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
-import Image from './Image';
+import Image from '../Components/Image';
 
 const headerImgs = ['bee'];
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];
