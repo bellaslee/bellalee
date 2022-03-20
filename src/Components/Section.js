@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from './Image';
 
 class Section extends React.Component {
   constructor(props) {
@@ -8,13 +7,15 @@ class Section extends React.Component {
     this.sectionRef = React.createRef();
     window.addEventListener('scroll', this.getIndex);
   }
-  
+
   componentDidMount() {
+    this.getIndex();
     this.sectionRef.current.addEventListener('load', this.getIndex);
   }
 
   /**
-   * Gets the current position of the image from the top of the page.
+   * Gets the current position of the image and updates the state to true if the image is visible
+   * on the screen and false if it is not.
    */
   getIndex = () => {
     let top = 0;
@@ -35,15 +36,24 @@ class Section extends React.Component {
     }
   }
 
-  activeClass() {
+  /**
+   * If the section is active, returns a corresponding string to be used as a class name.
+   * @returns {String} - either 'active' or an empty string.
+   */
+  setActive() {
     if (this.state.active) {
       return 'active';
     }
     return '';
   }
+
   render() {
     return (
-      <section ref={this.sectionRef} id={`${this.props.name}`} className={`block ${this.activeClass()}`}>
+      <section
+        ref={this.sectionRef}
+        id={`${this.props.name}`}
+        className={`block ${this.setActive()}`}
+      >
         <div className="container">
           {this.props.children}
         </div>

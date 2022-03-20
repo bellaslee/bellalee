@@ -3,7 +3,6 @@ Styling for footer only.
 */
 
 #footer {
-  font-size: 24px;
   flex-direction: column;
 }
 
@@ -16,28 +15,6 @@ Styling for footer only.
   width: 47.5%;
   transform: rotate(-4.63deg);
   margin-left: -149px;
-}
-
-#footer ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#footer li {
-  margin-bottom: 24px;
-  transition: 1s;
-}
-
-#footer li:hover {
-  font-size: 30px;
-}
-
-#footer a {
-  text-decoration: none;
-}
-
-#footer a:visited {
-  color: inherit;
 }
 
 .copyright {

@@ -47,3 +47,26 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+.link-list {
+  font-size: 24px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.link-list li {
+  margin-bottom: 24px;
+  transition: 1s;
+}
+
+.link-list li:hover {
+  font-size: 30px;
+}
+
+.link-list a {
+  text-decoration: none;
+}
+
+.link-list a:visited {
+  color: inherit;
+}

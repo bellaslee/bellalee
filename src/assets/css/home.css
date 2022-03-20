@@ -28,7 +28,7 @@
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(75px, -100px) scale(0.7);
+    transform: translate(50px, -200px) scale(0.7);
   }
   100% { 
     transform: translate(0px, -0px) scale(1);
@@ -37,7 +37,7 @@
 
 #home-header .content {
   position: absolute;
-  left: 48.2%;
+  right: 12%;
   top: 10.2%;
 }
 
