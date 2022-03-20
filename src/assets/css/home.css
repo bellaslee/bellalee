@@ -16,7 +16,7 @@
   visibility: hidden;
 }
 
-.bee.active {
+.active .bee {
   visibility: visible;
   animation: fly 1s ease infinite;
   animation-play-state: paused;
@@ -24,14 +24,14 @@
 }
 
 @keyframes fly {
-   0% { 
+  0% { 
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(100px, -300px) scale(0.5);
+    transform: translate(75px, -100px) scale(0.7);
   }
   100% { 
-    transform: translate(0px, -0px) scale(0.3);
+    transform: translate(0px, -0px) scale(1);
   }
 }
 
@@ -48,10 +48,10 @@
 
 .girl {
   bottom: 0px;
-  right: -500px;
+  right: -200px;
 }
 
-.girl.active {
+.active .girl {
   animation: girlMoveLeft 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -59,10 +59,10 @@
 
 @keyframes girlMoveLeft {
   0% { 
-      transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(-500px, 0px);
+    transform: translate(-200px, 0px);
   }
   100% { 
     transform: translate(0px, 0px);
@@ -75,8 +75,7 @@
   transform: scale(0.3);
   opacity: 0;
 }
-
-.small-stars-left.active {
+.active .small-stars-left {
   animation: smallMoveLeft 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -103,7 +102,7 @@
   opacity: 0;
 }
 
-.big-star.active {
+.active .big-star {
   animation: bigMoveLeft 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -135,7 +134,7 @@
   opacity: 0;
 }
 
-.small-stars-right.active {
+.active .small-stars-right {
   animation: smallMoveRight 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -154,7 +153,6 @@
     opacity: 0;
   }
 }
-
 
 #home-about .content {
   width: 28.2%;

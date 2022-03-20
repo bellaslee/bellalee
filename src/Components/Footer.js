@@ -1,7 +1,7 @@
 import '../assets/css/Footer.css';
 import React from 'react';
 import Image from './Image';
-import { render } from '@testing-library/react';
+import Section from './Section';
 
 class Footer extends React.Component {
   constructor(props) {
@@ -10,11 +10,11 @@ class Footer extends React.Component {
       document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
     }, false);
   }
-  
+
   render() {
     return (
-      <section id="footer" className="block">
-        <div className="container">
+      <div className="wrapper">
+        <Section name="footer">
           <div className="content">
             <h2>Let's get in touch.</h2>
             <ul>
@@ -28,11 +28,11 @@ class Footer extends React.Component {
             </ul>
           </div>
           <Image src="./img/assets/touch.png" alt="" className="touch" />
-        </div>
+        </Section>
         <div className="copyright">
           &copy; 2022 Bella Lee.
         </div>
-      </section>
+      </div>
     );
   }
 }
