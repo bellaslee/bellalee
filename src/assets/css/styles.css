@@ -36,6 +36,12 @@ section {
   justify-content: center;
 }
 
+.block {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
 .container {
   display: flex;
   align-items: center;
