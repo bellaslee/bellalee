@@ -9,7 +9,7 @@
   width: 33.3%;
   position: absolute;
   left: 16.6%;
-  bottom: 14.2%
+  bottom: 14.2%;
 }
 
 #home-header .content {
@@ -21,8 +21,38 @@
 #home-about img {
   width: 55%;
   position: absolute;
+  transition: 3s;
+}
+
+.girl {
   bottom: 0px;
   right: 0px;
+}
+
+
+.small-stars-left {
+  bottom: -50px;
+  right: -100px;
+  transition-delay: 0.5s;
+}
+
+.small-stars-left.active {
+  transform: translate(-100px, -50px);
+}
+
+.small-stars-right {
+  bottom: 0px;
+  right: 0px;
+}
+
+.big-star {
+  bottom: 50px;
+  right: -200px;
+  transition-delay: 1s;
+}
+
+.big-star.active {
+  transform: translate(-200px, 50px);
 }
 
 #home-about .content {

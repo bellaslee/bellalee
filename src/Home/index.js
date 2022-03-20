@@ -3,6 +3,7 @@ import '../assets/css/home.css';
 import React from 'react';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
+import Image from './Image';
 
 const headerImgs = ['bee'];
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];
@@ -12,17 +13,32 @@ class Home extends React.Component {
     super(props);
     this.state = { navShown: false };
     this.animationRef = React.createRef();
+    window.addEventListener('scroll', () => {
+      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }, false);
   }
 
+  /**
+   * Toggles whether the navigation is being shown or not.
+   */
   updateNavShown = () => {
     this.setState(prevState => ({
       navShown: !prevState.navShown
     }))
   }
 
-  animateImage(currentIndex) {
-    if (currentIndex <= (window.innerHeight || document.documentElement.clientHeight)) {
-      console.log('animation starting!');
+  /**
+   * 
+   * @param {int} currentIndex - the current position of the image from the top.
+   * @param {Element} imageRef - the image that is being tracked.
+   */
+  checkPosition(top, bottom, imageRef) {
+    if (top <= (window.innerHeight || document.documentElement.clientHeight)) {
+      imageRef.current.classList.add('active');
+      console.log(`${imageRef.current.classList} is currently at the position ${top}`);
+    }
+    if (bottom < 0) {
+      imageRef.current.classList.remove('active');
     }
   }
 
@@ -33,7 +49,7 @@ class Home extends React.Component {
           <div className="container">
             {headerImgs.map((img) => {
               return (
-                <img src={`./img/assets/${img}.png`} alt="" className={`${img}`} />
+                <Image src={`./img/assets/${img}.png`} alt="" className={`${img}`} />
               )
             })}
             <div className="content">
@@ -47,7 +63,7 @@ class Home extends React.Component {
           <div className="container">
             {aboutImgs.map((img) => {
               return (
-                <img src={`./img/assets/${img}.png`} alt="" className={`${img}`} />
+                <Image src={`./img/assets/${img}.png`} alt="" className={`${img}`} />
               )
             })}
             <div className="content">
@@ -75,7 +91,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        
+
         <Footer />
         <Nav onClick={this.updateNavShown} navShown={this.state.navShown} />
       </div>
