@@ -2,6 +2,8 @@
   General styling for website.
 */
 
+@import url(./animations.css);
+
 body {
   background-color: #DCD7CE;
   color: #817676;
@@ -22,33 +24,9 @@ h1 {
   animation-delay: 0.3s;
 }
 
-@keyframes fadeInExpand {
-  0% {
-    transform: translate(0px, 25px);
-    opacity: 0;
-    letter-spacing: -20px;
-  } 
-  100% {
-    transform: translate(0px, 0px);
-    opacity: 1;
-    letter-spacing: -8px;
-  }
-}
-
 .active h2, .active p, .active ul {
   animation: fadeInUp 2s;
   animation-delay: 0.3s;
-}
-
-@keyframes fadeInUp {
-  0% {
-    transform: translate(0px, 25px);
-    opacity: 0;
-  } 
-  100% {
-    transform: translate(0px, 0px);
-    opacity: 1;
-  }
 }
 
 h2 {

@@ -1,3 +1,5 @@
+@import url(./animations.css);
+
 .home {
   display: flex;
   flex-direction: column;
@@ -5,34 +7,23 @@
   align-items: center;
 }
 
-#home-header img {
+.bee {
   width: 33.3%;
   position: absolute;
   left: 16.6%;
   bottom: 14.2%;
-}
-
-.bee {
   visibility: hidden;
 }
 
 .active .bee {
   visibility: visible;
-  animation: fly 1s ease infinite;
+  --xTranslate: 50px;
+  --yTranslate: -200px;
+  --firstScale: 1;
+  --secondScale: 0.7;
+  animation: translateAndScale 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
-}
-
-@keyframes fly {
-  0% { 
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(50px, -200px) scale(0.7);
-  }
-  100% { 
-    transform: translate(0px, -0px) scale(1);
-  }
 }
 
 #home-header .content {
@@ -52,21 +43,13 @@
 }
 
 .active .girl {
-  animation: girlMoveLeft 1s ease infinite;
+  --xTranslate: -200px;
+  --yTranslate: 0px;
+  --firstScale: 1;
+  --secondScale: 1;
+  animation: translateAndScale 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
-}
-
-@keyframes girlMoveLeft {
-  0% { 
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(-200px, 0px);
-  }
-  100% { 
-    transform: translate(0px, 0px);
-  }
 }
 
 .small-stars-left {
@@ -75,56 +58,17 @@
   transform: scale(0.3);
   opacity: 0;
 }
+
 .active .small-stars-left {
-  animation: smallMoveLeft 1s ease infinite;
+  --xTranslate: -200px;
+  --yTranslate: -50px;
+  --firstScale: 0.3;
+  --secondScale: 1;
+  --initialOpacity: 0;
+  --finalOpacity: 1;
+  animation: translateAndScale 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
-}
-
-@keyframes smallMoveLeft {
-  0% { 
-    transform: translate(0px, 0px) scale(0.3);
-  }
-  50% {
-    transform: translate(-200px, -50px) scale(1);
-    opacity: 1;
-  }
-  100% { 
-    transform: translate(0px, -0px) scale(0.3);
-    opacity: 0;
-  }
-}
-
-.big-star {
-  bottom: -300px;
-  right: -200px;
-  transform: scale(0.3);
-  opacity: 0;
-}
-
-.active .big-star {
-  animation: bigMoveLeft 1s ease infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-}
-
-@keyframes bigMoveLeft {
-  0% { 
-    transform: translate(0px, 0px) scale(0.3);
-  }
-  15% {
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-200px, -300px) scale(1);
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% { 
-    transform: translate(0px, -0px) scale(0.3);
-  }
 }
 
 .small-stars-right {
@@ -135,23 +79,28 @@
 }
 
 .active .small-stars-right {
-  animation: smallMoveRight 1s ease infinite;
+  --xTranslate: 100px;
+  --yTranslate: -100px;
+  --firstScale: 0.5;
+  --secondScale: 1;
+  --initialOpacity: 0;
+  --finalOpacity: 1;
+  animation: translateAndScale 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
 
-@keyframes smallMoveRight {
-  0% { 
-    transform: translate(0px, 0px) scale(0.5);
-  }
-  50% {
-    transform: translate(100px, -100px) scale(1);
-    opacity: 1;
-  }
-  100% { 
-    transform: translate(0px, -0px) scale(0.5);
-    opacity: 0;
-  }
+.big-star {
+  bottom: -300px;
+  right: -200px;
+  transform: scale(0.3);
+  opacity: 0;
+}
+
+.active .big-star {
+  animation: bigStar 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
 
 #home-about .content {
