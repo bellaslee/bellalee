@@ -4,8 +4,8 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
+import Home from './home';
+import About from './about';
 
 const rootElement = document.getElementById('root');
 render(
