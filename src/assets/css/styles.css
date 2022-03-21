@@ -4,15 +4,15 @@
 
 @import url(./animations.css);
 
-body * {
-  transition: 0.5s;
-}
-
 body {
   background-color: #DCD7CE;
   color: #817676;
   font-family: 'Barlow', sans-serif;
   font-size: 16px;
+}
+
+h1, h2, p, img {
+  transition: 0.5s;
 }
 
 h1 {
@@ -53,7 +53,8 @@ section {
 
 .block {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
   position: relative;
 }
 
@@ -71,7 +72,7 @@ section {
 
 .link-list li {
   margin-bottom: 24px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .link-list li:hover {
@@ -86,16 +87,24 @@ section {
   color: inherit;
 }
 
-@media only screen and (max-aspect-ratio: 3/2) {
-  body {
-    font-size: 12px;
-  }
+@media only screen and (max-width: 1200px) {
   .content {
     width: 40% !important;
     top: 0;
   } 
+  
+  #footer .container {
+    flex-direction: column;
+  }
 
-  h1 {
+  #footer img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+   h1 {
     font-size: 64px;
     --letterSpacing: -5px;
   }
@@ -103,18 +112,16 @@ section {
   .active h1 {
     --letterSpacing: -5px;
   }
-  
-  #footer .container {
-    flex-direction: column;
-  }
 
   h2 {
     font-size: 32px;
   }
-}
-
-@media only screen and (max-aspect-ratio: 1/1) {
+  
   .content {
-    width: 70% !important;
+    font-size: 12px;
+    position: static !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90% !important;
   }
 }
