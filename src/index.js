@@ -8,6 +8,7 @@ import Home from './home';
 import About from './about';
 
 const rootElement = document.getElementById('root');
+
 render(
   <BrowserRouter>
     <Routes>
