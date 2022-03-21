@@ -51,7 +51,7 @@ section {
   justify-content: center;
 }
 
-.block {
+.section {
   width: 100vw;
   min-height: 100vh;
   max-height: fit-content;
@@ -76,7 +76,7 @@ section {
 }
 
 .link-list li:hover {
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 
 .link-list a {

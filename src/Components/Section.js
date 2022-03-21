@@ -42,7 +42,7 @@ class Section extends React.Component {
    */
   setActive() {
     if (this.state.active) {
-      return 'active';
+      return 'section--active';
     }
     return '';
   }
@@ -51,8 +51,7 @@ class Section extends React.Component {
     return (
       <section
         ref={this.sectionRef}
-        id={`${this.props.name}`}
-        className={`block ${this.setActive()}`}
+        className={`section ${this.props.name} ${this.setActive()}`}
       >
         <div className="container">
           {this.props.children}

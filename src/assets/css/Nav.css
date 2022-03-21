@@ -1,29 +1,29 @@
-#nav-button {
+.nav__button {
   position: fixed;
   right: 6%;
   top: 6%;
   z-index: 20;
 }
 
-#nav-button:hover {
+.nav__button:hover {
   cursor: pointer;
 }
 
-#nav-button img {
+.nav__button img {
   margin-bottom: 13px;
   display: block;
   transition: 0.5s;
 }
 
-#nav-button .top.active {
+.nav__icon-component__top--active {
   transform: rotate(45deg);
 }
 
-#nav-button .bottom.active {
+.nav__icon-component__bottom--active {
   transform: translate(0.21px, -17.46px) rotate(-45deg);
 }
 
-#nav-view {
+.nav__menu {
   background-color: rgba(72, 63, 63, 0.85);
   color: #DCD7CE;
   height: 100vh;
@@ -36,17 +36,17 @@
   transition: 0.5s;
 }
 
-#nav-view .link-list {
+.nav__link-list {
   font-size: 32px;
   text-align: right;
   margin-right: 20%;
 }
 
-#nav-view .link-list li:hover, .current {
+.nav__link-list__item:hover, .nav__link-list__item--current {
   font-size: 50px;
 }
 
-#nav-view.hidden {
+.nav__menu--hidden {
   transform: translate(100%, 0%);
   visibility: hidden;
 }

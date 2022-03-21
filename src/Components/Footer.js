@@ -14,9 +14,9 @@ class Footer extends React.Component {
     return (
       <div className="wrapper">
         <Section name="footer">
-          <div className="content">
+          <div className="footer__content">
             <h2>Let's get in touch.</h2>
-            <ul className="link-list">
+            <ul className="link-list footer__link-list">
               <li>bella@bellalee.com</li>
               <li>
                 <a href="https://www.linkedin.com/in/bellasylee/" target="_blank" rel="noreferrer">Linkedin</a>
@@ -26,7 +26,7 @@ class Footer extends React.Component {
               </li>
             </ul>
           </div>
-          <img src="./img/assets/touch.png" alt="" className="touch" />
+          <img src="./img/assets/touch.png" alt="" className="footer__image" />
         </Section>
         <div className="copyright">
           &copy; 2022 Bella Lee.

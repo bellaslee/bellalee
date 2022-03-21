@@ -24,8 +24,8 @@ class Nav extends React.Component {
    */
   onClick = () => {
     this.props.onClick();
-    this.topRef.current.classList.toggle('active');
-    this.bottomRef.current.classList.toggle('active');
+    this.topRef.current.classList.toggle('nav__icon-component__top--active');
+    this.bottomRef.current.classList.toggle('nav__icon-component__bottom--active');
   }
 
   /**
@@ -36,7 +36,7 @@ class Nav extends React.Component {
     if (this.props.active) {
       return '';
     }
-    return 'hidden';
+    return 'nav__menu--hidden';
   }
 
   /**
@@ -47,7 +47,7 @@ class Nav extends React.Component {
    */
   checkCurrentPage(name) {
     if (name === this.props.currentPage) {
-      return 'current';
+      return 'nav__link-list__item--current';
     }
     return '';
   }
@@ -68,13 +68,13 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <section id="nav">
-        <section id="nav-view" className={`${this.setActive()}`}>
-          <ul className="link-list">
+      <section className="nav">
+        <section className={`nav__menu ${this.setActive()}`}>
+          <ul className="link-list nav__link-list">
             {
               this.linkConfig.map((link) => {
                 return (
-                  <li key={link.page} className={this.checkCurrentPage(link.page)}>
+                  <li key={link.page} className={`nav__link-list__item ${this.checkCurrentPage(link.page)}`}>
                     <a href={link.link}>{link.page}</a>
                   </li>
                 )
@@ -82,9 +82,9 @@ class Nav extends React.Component {
             }
           </ul>
         </section>
-        <div id="nav-button" onClick={this.onClick}>
-          <img ref={this.topRef} src={this.imageSource()} alt="" className="top" />
-          <img ref={this.bottomRef} src={this.imageSource()} alt="" className="bottom" />
+        <div className="nav__button" onClick={this.onClick}>
+          <img ref={this.topRef} src={this.imageSource()} alt="" className="nav__icon-component nav__icon-component__top" />
+          <img ref={this.bottomRef} src={this.imageSource()} alt="" className="nav__icon-component nav__icon-component__bottom" />
         </div>
       </section>
     );
