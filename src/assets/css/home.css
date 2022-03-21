@@ -1,3 +1,7 @@
+/*
+  Styling for home page.
+*/
+
 @import url(./animations.css);
 
 .home {
@@ -8,7 +12,7 @@
 }
 
 .bee {
-  width: 33.3%;
+  max-width: 33.3%;
   position: absolute;
   left: 16.6%;
   bottom: 14.2%;
@@ -33,7 +37,7 @@
 }
 
 #home-about img {
-  width: 55%;
+  max-width: 55%;
   position: absolute;
 }
 
@@ -106,10 +110,22 @@
 #home-about .content {
   width: 28.2%;
   position: absolute;
-  bottom: 15.7%;
+  top: 20%;
   left: 14%;
 }
 
 #home-about h2 {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .bee {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* #home-about img {
+    top: 0;
+  } */
 }

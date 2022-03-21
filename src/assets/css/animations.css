@@ -51,7 +51,7 @@
   100% {
     transform: translate(0px, 0px);
     opacity: 1;
-    letter-spacing: -8px;
+    letter-spacing: var(--letterSpacing);
   }
 }
 
