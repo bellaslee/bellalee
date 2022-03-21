@@ -13,9 +13,9 @@
 
 .bee {
   max-width: 33.3%;
-  position: absolute;
-  left: 16.6%;
-  bottom: 14.2%;
+  margin-left: 10%;
+  margin-right: 0;
+  margin-bottom: -15%;
   visibility: hidden;
 }
 
@@ -31,9 +31,8 @@
 }
 
 #home-header .content {
-  position: absolute;
-  right: 12%;
-  top: 10.2%;
+  margin-right: 12%;
+  margin-left: 0;
 }
 
 #home-about img {
@@ -109,9 +108,8 @@
 
 #home-about .content {
   width: 28.2%;
-  position: absolute;
-  top: 20%;
-  left: 14%;
+  margin-left: 14%;
+  margin-right: auto;
 }
 
 #home-about h2 {
@@ -123,10 +121,30 @@
     position: static;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -5%;
+  }
+
+  #home-header .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+   #home-about img {
+    width: 45%;
+  }
+  
+  #footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footer img {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #home-header .content, #home-about content {
-    position: static !important;
     margin-left: auto;
     margin-right: auto;
   }

@@ -11,7 +11,7 @@ body {
   font-size: 16px;
 }
 
-h1, h2, p, img {
+h1, h2, h3, p, img {
   transition: 0.5s;
 }
 
@@ -92,29 +92,25 @@ section {
     width: 40% !important;
     top: 0;
   } 
-  
-  #footer .container {
-    flex-direction: column;
-  }
 
-  #footer img {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-   h1 {
-    font-size: 64px;
+  h1 {
+    font-size: 72px;
     --letterSpacing: -5px;
   }
 
   .active h1 {
     --letterSpacing: -5px;
   }
+}
 
+@media only screen and (max-width: 650px) {
   h2 {
     font-size: 32px;
+  }
+
+  h3 {
+    font-size: 12px;
+    margin-left: 5px;
   }
   
   .content {
@@ -122,6 +118,6 @@ section {
     position: static !important;
     margin-left: auto;
     margin-right: auto;
-    width: 90% !important;
+    width: 75% !important;
   }
 }
