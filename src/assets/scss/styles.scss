@@ -1,11 +1,13 @@
 /*
   General styling for website.
 */
+
 @import url(./animations.css);
+
 body {
   background-color: #DCD7CE;
   color: #817676;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 16px;
 }
 
@@ -89,7 +91,7 @@ section {
   .content {
     width: 40% !important;
     top: 0;
-  }
+  } 
 
   h1 {
     font-size: 72px;
@@ -100,6 +102,7 @@ section {
     --letterSpacing: -5px;
   }
 }
+
 @media only screen and (max-width: 650px) {
   h2 {
     font-size: 32px;
@@ -109,7 +112,7 @@ section {
     font-size: 12px;
     margin-left: 5px;
   }
-
+  
   .content {
     font-size: 12px;
     position: static !important;
@@ -118,5 +121,3 @@ section {
     width: 75% !important;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

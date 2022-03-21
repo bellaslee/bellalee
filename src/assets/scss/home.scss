@@ -1,7 +1,9 @@
 /*
   Styling for home page.
 */
+
 @import url(./animations.css);
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -128,10 +130,10 @@
     text-align: center;
   }
 
-  .about__image {
+   .about__image {
     width: 45%;
   }
-
+  
   .footer .container {
     flex-direction: column;
     text-align: center;
@@ -142,10 +144,8 @@
     margin-right: auto;
   }
 
-  .home__content, .about__content {
+ .home__content, .about__content {
     margin-left: auto;
     margin-right: auto;
   }
 }
-
-/*# sourceMappingURL=home.css.map */

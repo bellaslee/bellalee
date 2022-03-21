@@ -1,5 +1,5 @@
 @keyframes bigStar {
-  0% {
+  0% { 
     transform: translate(0px, 0px) scale(0.3);
   }
   15% {
@@ -12,55 +12,57 @@
   75% {
     opacity: 0;
   }
-  100% {
-    transform: translate(0px, 0px) scale(0.3);
+  100% { 
+    transform: translate(0px, -0px) scale(0.3);
   }
 }
+
 @keyframes translateAndScale {
   0% {
     transform: translate(0px, 0px) scale(var(--firstScale));
-    opacity: var(--initialOpacity);
+    opacity: var(--initialOpacity)
   }
   50% {
     transform: translate(var(--xTranslate), var(--yTranslate)) scale(var(--secondScale));
-    opacity: var(--finalOpacity);
+    opacity: var(--finalOpacity)
   }
   100% {
-    transform: translate(0px, 0px) scale(var(--firstScale));
+    transform: translate(0px, -0px) scale(var(--firstScale));
   }
 }
+
 @keyframes fadeInUp {
   0% {
     transform: translate(0px, 25px);
     opacity: 0;
-  }
+  } 
   100% {
     transform: translate(0px, 0px);
     opacity: 1;
   }
 }
+
 @keyframes fadeInExpand {
   0% {
     transform: translate(0px, 25px);
     opacity: 0;
     letter-spacing: -20px;
-  }
+  } 
   100% {
     transform: translate(0px, 0px);
     opacity: 1;
     letter-spacing: var(--letterSpacing);
   }
 }
+
 @keyframes skew {
-  0% {
+  0% { 
     transform: skew(0);
   }
   50% {
     transform: skew(-10deg, -30deg) scale(0.75);
   }
-  100% {
+  100% { 
     transform: skew(0);
   }
 }
-
-/*# sourceMappingURL=animations.css.map */
