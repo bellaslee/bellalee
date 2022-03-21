@@ -2,13 +2,25 @@
   General styling for website.
 */
 
-@import url(./animations.css);
+@use 'animations';
+
+$font-stack: 'Barlow', sans-serif;
+$primary-color: #DCD7CE;
+$secondary-color: #483F3F;
+$tertiary-color: #817676;
+
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 body {
-  background-color: #DCD7CE;
-  color: #817676;
-  font-family: 'Barlow', sans-serif;
+  background-color: $primary-color;
+  color: $tertiary-color;
+  font-family: $font-stack;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, p, img {
@@ -16,42 +28,40 @@ h1, h2, h3, p, img {
 }
 
 h1 {
-  color: #483F3F;
+  color: $secondary-color;
   font-size: 144px;
-  letter-spacing: var(--letterSpacing);
+  letter-spacing: var(--h1-letter-spacing);
+  margin-top: 0%;
   margin-bottom: -15px;
   font-weight: 400;
 }
 
-.active h1 {
-  --letterSpacing: -8px;
-  animation: fadeInExpand 1s;
-}
-
-.active h2, .active p, .active ul {
-  animation: fadeInUp 2s;
-}
-
 h2 {
-  color: #483F3F;
+  color: $secondary-color;
   font-weight: bold;
   font-size: 64px;
 }
 
 h3 {
-  color: #817676;
+  color: $tertiary-color;
   font-weight: bold;
   font-size: 16px;
   margin-left: 10px;
 }
 
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.section--active {
+  h1 {
+    --h1-letter-spacing: -8px;
+    animation: fadeInExpand 1s;
+  }
+  
+  h2, p, ul {
+    animation: fadeInUp 2s;  
+  }
 }
 
 .section {
+  @extend %flex;
   width: 100vw;
   min-height: 100vh;
   max-height: fit-content;
@@ -59,9 +69,7 @@ section {
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex;
 }
 
 .link-list {
@@ -73,10 +81,6 @@ section {
 .link-list li {
   margin-bottom: 24px;
   transition: 0.5s;
-}
-
-.link-list li:hover {
-  /* font-size: 30px; */
 }
 
 .link-list a {
@@ -95,11 +99,11 @@ section {
 
   h1 {
     font-size: 72px;
-    --letterSpacing: -5px;
+    $h1-letter-spacing: -5px;
   }
 
   .active h1 {
-    --letterSpacing: -5px;
+    $h1-letter-spacing: -5px;
   }
 }
 
@@ -114,10 +118,8 @@ section {
   }
   
   .content {
-    font-size: 12px;
     position: static !important;
     margin-left: auto;
     margin-right: auto;
-    width: 75% !important;
   }
 }

@@ -1,5 +1,4 @@
 import '../assets/css/home.css';
-import '../assets/css/styles.css'
 import React from 'react';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';

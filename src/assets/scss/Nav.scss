@@ -3,24 +3,24 @@
   right: 6%;
   top: 6%;
   z-index: 20;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.nav__button:hover {
-  cursor: pointer;
-}
-
-.nav__button img {
+.nav__icon-component {
   margin-bottom: 13px;
   display: block;
   transition: 0.5s;
-}
 
-.nav__icon-component__top--active {
-  transform: rotate(45deg);
-}
+  &__top--active {
+    transform: rotate(45deg);
+  }
 
-.nav__icon-component__bottom--active {
-  transform: translate(0.21px, -17.46px) rotate(-45deg);
+  &__bottom--active {
+    transform: translate(0.21px, -17.46px) rotate(-45deg);
+  }
 }
 
 .nav__menu {
@@ -32,22 +32,28 @@
   right: 0;
   position: fixed;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   justify-content: flex-end;
   transition: 0.5s;
+
+  &--hidden {
+    transform: translate(100%, 0%);
+    visibility: hidden;
+  }
 }
 
 .nav__link-list {
-  font-size: 32px;
-  text-align: right;
-  margin-right: 20%;
-}
+    font-size: 32px;
+    text-align: right;
+    margin-right: 20%;
 
-.nav__link-list__item:hover, .nav__link-list__item--current {
+    &__item:hover {
+      font-size: 50px;
+    }
+  }
+
+.nav__link-list__item--current {
   font-size: 50px;
 }
-
-.nav__menu--hidden {
-  transform: translate(100%, 0%);
-  visibility: hidden;
-}
-

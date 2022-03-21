@@ -12,16 +12,16 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="footer__wrapper">
         <Section name="footer">
           <div className="footer__content">
             <h2>Let's get in touch.</h2>
             <ul className="link-list footer__link-list">
-              <li>bella@bellalee.com</li>
-              <li>
+              <li className="footer__link-list__item">bella@bellalee.com</li>
+              <li className="footer__link-list__item">
                 <a href="https://www.linkedin.com/in/bellasylee/" target="_blank" rel="noreferrer">Linkedin</a>
               </li>
-              <li>
+              <li className="footer__link-list__item">
                 <a href="https://github.com/bellaslee" target="_blank" rel="noreferrer">Github</a>
               </li>
             </ul>
