@@ -1,5 +1,5 @@
-import '../assets/css/styles.css';
 import '../assets/css/home.css';
+import '../assets/css/styles.css'
 import React from 'react';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
@@ -30,30 +30,31 @@ class Home extends React.Component {
   /**
    * Generates the images needed for a section from an array of image filenames.
    * @param {Array} imgs - array of images needed.
+   * @param {String} className - the class name for the image.
    * @returns {Element} - img tags with proper key, src, and alt.
    */
-  genImages(imgs) {
+  genImages(imgs, className) {
     return imgs.map((img) => {
       return (
-        <img key={img} src={`./img/assets/${img}.png`} alt="" className={img} />
+        <img key={img} src={`./img/assets/${img}.png`} alt="" className={`${className} ${className}__${img}`} />
       )
     })
   }
 
   render() {
     return (
-      <div className="home">
-        <Section name="home-header">
-          {this.genImages(headerImgs)}
-          <div className="content">
+      <div className="wrapper">
+        <Section name="header">
+          {this.genImages(headerImgs, 'header__image')}
+          <div className="header__content">
             <h1>Bella Lee</h1>
             <h3>student at the University of Washington</h3>
           </div>
         </Section>
 
-        <Section name="home-about">
-          {this.genImages(aboutImgs)}
-          <div className="content">
+        <Section name="about">
+          {this.genImages(aboutImgs, 'about__image')}
+          <div className="about__content">
             <h2>Hi! I'm Bella.</h2>
             <p>
               I am a first-year student at the University of Washington intending on majoring

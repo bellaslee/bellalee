@@ -4,14 +4,14 @@
 
 @import url(./animations.css);
 
-.home {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.bee {
+.header__image__bee {
   max-width: 33.3%;
   margin-left: 10%;
   margin-right: 0;
@@ -19,7 +19,7 @@
   visibility: hidden;
 }
 
-.active .bee {
+.section--active .header__image__bee {
   visibility: visible;
   --xTranslate: 50px;
   --yTranslate: -200px;
@@ -45,7 +45,7 @@
   right: -200px;
 }
 
-.active .girl {
+.section--active .girl {
   --xTranslate: -200px;
   --yTranslate: 0px;
   --firstScale: 1;
@@ -62,7 +62,7 @@
   opacity: 0;
 }
 
-.active .small-stars-left {
+.section--active .small-stars-left {
   --xTranslate: -200px;
   --yTranslate: -50px;
   --firstScale: 0.3;
@@ -81,7 +81,7 @@
   opacity: 0;
 }
 
-.active .small-stars-right {
+.section--active .small-stars-right {
   --xTranslate: 100px;
   --yTranslate: -100px;
   --firstScale: 0.5;
@@ -100,7 +100,7 @@
   opacity: 0;
 }
 
-.active .big-star {
+.section--active .big-star {
   animation: bigStar 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -117,7 +117,7 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .bee {
+  .header__image__bee {
     position: static;
     margin-left: auto;
     margin-right: auto;
