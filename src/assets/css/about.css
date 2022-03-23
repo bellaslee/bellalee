@@ -121,7 +121,6 @@ h3 {
 }
 
 .link-list {
-  font-size: 24px;
   list-style-type: none;
   padding-left: 0;
 }
@@ -184,7 +183,7 @@ h3 {
 .hobby__content {
   width: 39%;
   align-self: flex-start;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 .hobby__image {

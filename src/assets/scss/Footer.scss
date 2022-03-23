@@ -32,8 +32,12 @@ $tertiary-color: #817676;
   align-items: center;
 }
 
-.footer__link-list a {
-  color: $tertiary-color;
+.footer__link-list {
+  font-size: 24px;
+  
+  a {
+    color: $tertiary-color;
+  }
 }
 
 .copyright {

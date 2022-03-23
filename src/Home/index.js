@@ -13,6 +13,7 @@ function Home() {
       document.body.style.setProperty('--scroll',
         window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
     }, false);
+    window.scrollTo(0, 0);
   }, []);
 
   /**

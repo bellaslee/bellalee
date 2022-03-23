@@ -14,7 +14,7 @@ function About() {
       document.body.style.setProperty('--scroll',
         window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
     }, false);
-    window.pageXOffset = 0;
+    window.scrollTo(0, 0);
   }, []);
 
   /**

@@ -1,5 +1,6 @@
 import '../assets/css/Nav.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -14,10 +15,10 @@ class Nav extends React.Component {
       page: "Home",
       link: "/"
     },
-    // {
-    //   page: "About",
-    //   link: "/about"
-    // }
+    {
+      page: "About",
+      link: "./about"
+    }
   ]
 
   /**
@@ -79,7 +80,7 @@ class Nav extends React.Component {
               this.linkConfig.map((link) => {
                 return (
                   <li key={link.page} className={`nav__link-list__item ${this.checkCurrentPage(link.page)}`}>
-                    <a href={link.link}>{link.page}</a>
+                    <Link to={link.link}>{link.page}</Link>
                   </li>
                 )
               })
