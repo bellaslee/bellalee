@@ -37,7 +37,7 @@ function About() {
         <p>This page is still under construction!</p>
       </Section>
 
-      <Section name="intro">
+      {/* <Section name="intro">
         {genImages(introImgs, 'intro__image')}
         <div className="content intro__content">
           <h2>Hi! I'm Bella.</h2>
@@ -71,7 +71,7 @@ function About() {
         <div className="hobby__images">
           {genImages(hobbyImgs, 'hobby__image')}
         </div>
-      </Section>
+      </Section> */}
 
       <Footer />
       <Nav currentPage="About" />
