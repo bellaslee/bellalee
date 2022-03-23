@@ -160,9 +160,11 @@ h3 {
   }
 
   .content {
+    font-size: 12px;
     position: static !important;
     margin-left: auto;
     margin-right: auto;
+    width: 75% !important;
   }
 }
 /*
@@ -204,6 +206,16 @@ h3 {
 @media only screen and (min-width: 1200px) {
   .footer h2 {
     width: 298px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__image {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

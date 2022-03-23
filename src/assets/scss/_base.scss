@@ -84,6 +84,7 @@ h3 {
 }
 
 .link-list a {
+  color: $primary-color;
   text-decoration: none;
 }
 
@@ -118,8 +119,10 @@ h3 {
   }
   
   .content {
+    font-size: 12px;
     position: static !important;
     margin-left: auto;
     margin-right: auto;
+    width: 75% !important;
   }
 }

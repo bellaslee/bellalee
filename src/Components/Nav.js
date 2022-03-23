@@ -13,10 +13,10 @@ class Nav extends React.Component {
       page: "Home",
       link: "/"
     },
-    {
-      page: "About",
-      link: "/about"
-    }
+    // {
+    //   page: "About",
+    //   link: "/about"
+    // }
   ]
 
   /**

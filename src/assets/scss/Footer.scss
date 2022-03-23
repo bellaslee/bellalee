@@ -41,7 +41,23 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .footer h2 {
-    width: 298px;
+  .footer {
+    h2 {
+      width: 298px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__image {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

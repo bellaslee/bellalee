@@ -42,7 +42,7 @@ function Home() {
     <div className="wrapper">
       <Section name="header">
         {genImages(headerImgs, 'header__image')}
-        <div className="header__content">
+        <div className="content header__content">
           <h1>Bella Lee</h1>
           <h3>student at the University of Washington</h3>
         </div>
@@ -50,7 +50,7 @@ function Home() {
 
       <Section name="about">
         {genImages(aboutImgs, 'about__image')}
-        <div className="about__content">
+        <div className="content about__content">
           <h2>Hi! I'm Bella.</h2>
           <p>
             I am a first-year student at the University of Washington intending on majoring
