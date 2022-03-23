@@ -62,6 +62,28 @@
     transform: skew(0);
   }
 }
+@keyframes floatUp {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floatDown {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
 /*
   General styling for website.
 */
@@ -171,8 +193,8 @@ h3 {
 .intro__content {
   width: 33%;
 }
-.intro__image__starburst {
-  width: 21%;
+.intro__image {
+  width: 22%;
   opacity: 0;
 }
 
@@ -185,26 +207,127 @@ h3 {
   margin-left: 24px;
   margin-top: 24px;
 }
+.hobby__content h2 {
+  margin: 0%;
+}
 .hobby__image {
+  width: 100%;
+}
+.hobby__image__container :hover {
+  margin: 0%;
+  transform: scale(1.1);
+}
+.hobby__image__caption {
+  text-align: center;
+}
+.hobby__image__guitar {
+  animation: floatUp 3s ease infinite;
+  width: 25%;
+}
+.hobby__image__guitar .hobby__image__caption {
+  margin: -5% 30% 0% 0%;
+}
+.hobby__image__illust {
+  animation: floatUp 3s ease infinite;
+  width: 28%;
+  margin: -20% -7% 0% -7%;
+}
+.hobby__image__illust .hobby__image__caption {
+  margin: -20% 30% 0% 0%;
+}
+.hobby__image__anime {
+  animation: floatUp 3s ease infinite;
+  width: 17%;
+  margin: 10% 0% 0% 0%;
+}
+.hobby__image__anime .hobby__image__caption {
+  margin: -5% 0% 0% 0%;
+}
+.hobby__image__coffee {
+  animation: floatDown 3s ease infinite;
   width: 16%;
+  margin: 30% -2% 0% -3%;
+}
+.hobby__image__coffee .hobby__image__caption {
+  margin: -5% 0% 0% 0%;
+}
+.hobby__image__singing {
+  animation: floatDown 3s ease infinite;
+  width: 23%;
+  margin: 25% -5% 0% -5%;
+}
+.hobby__image__singing .hobby__image__caption {
+  margin: -25% 0% 0% 30%;
 }
 .hobby__images {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: -3%;
+  width: 80%;
 }
 
-.section--active .intro__image__starburst {
-  --firstScale: 0.5;
-  --secondScale: 1;
+.blurb__content {
+  width: 35%;
+}
+.blurb__image {
+  width: 25%;
+  margin: 31% -1000px 0% 950px;
+}
+
+.section--active .intro__image {
+  --firstScale: 1;
+  --secondScale: 0.5;
   --xTranslate: -25px;
   --yTranslate: -50px;
-  --initialOpacity: 0;
-  --finalOpacity: 1;
-  animation: translateAndScale 1s;
+  --initialOpacity: 1;
+  --finalOpacity: 0;
+  animation: translateAndScale 1s ease infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
+}
+.section--active .blurb__image {
+  --firstScale: 1;
+  --secondScale: 1;
+  --xTranslate: -1000px;
+  --yTranslate: 0px;
+  --initialOpacity: 0;
+  --finalOpacity: 1;
+  animation: translateAndScale 1s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@media only screen and (max-width: 1200px) {
+  .intro .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro__image {
+    align-self: flex-start;
+    margin: 0 10px -20px 0;
+  }
+
+  .blurb {
+    display: flex;
+    flex-direction: column;
+  }
+  .blurb__image {
+    align-self: flex-start;
+    margin-top: 100%;
+  }
+
+  .hobby__images {
+    flex-direction: column;
+  }
+  .hobby__image__guitar, .hobby__image__illust, .hobby__image__anime, .hobby__image__coffee, .hobby__image__singing {
+    margin: 15px;
+  }
+  .hobby__image__guitar .hobby__image__caption, .hobby__image__illust .hobby__image__caption, .hobby__image__anime .hobby__image__caption, .hobby__image__coffee .hobby__image__caption, .hobby__image__singing .hobby__image__caption {
+    margin: auto;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

@@ -62,6 +62,28 @@
     transform: skew(0);
   }
 }
+@keyframes floatUp {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floatDown {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
 /*
   General styling for website.
 */
@@ -168,7 +190,7 @@ h3 {
 /*
   Styling for home page.
 */
-.header__image__bee {
+.header__image {
   max-width: 33.3%;
   visibility: hidden;
 }
@@ -208,7 +230,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.section--active .header__image__bee {
+.section--active .header__image {
   visibility: visible;
   --xTranslate: 50px;
   --yTranslate: -200px;
@@ -256,12 +278,12 @@ h3 {
 }
 
 @media only screen and (max-width: 1200px) {
-  .home__content, .footer__image, .header__image__bee {
+  .home__content, .header__image {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .header__image__bee {
+  .header__image {
     margin-bottom: -5%;
   }
   .header .container {
@@ -272,11 +294,6 @@ h3 {
 
   .about__image {
     width: 45%;
-  }
-
-  .footer .container {
-    flex-direction: column;
-    text-align: center;
   }
 }
 

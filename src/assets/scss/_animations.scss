@@ -1,5 +1,5 @@
 @keyframes bigStar {
-  0% { 
+  0% {
     transform: translate(0px, 0px) scale(0.3);
   }
   15% {
@@ -12,7 +12,7 @@
   75% {
     opacity: 0;
   }
-  100% { 
+  100% {
     transform: translate(0px, -0px) scale(0.3);
   }
 }
@@ -20,11 +20,12 @@
 @keyframes translateAndScale {
   0% {
     transform: translate(0px, 0px) scale(var(--firstScale));
-    opacity: var(--initialOpacity)
+    opacity: var(--initialOpacity);
   }
   50% {
-    transform: translate(var(--xTranslate), var(--yTranslate)) scale(var(--secondScale));
-    opacity: var(--finalOpacity)
+    transform: translate(var(--xTranslate), var(--yTranslate))
+      scale(var(--secondScale));
+    opacity: var(--finalOpacity);
   }
   100% {
     transform: translate(0px, -0px) scale(var(--firstScale));
@@ -35,7 +36,7 @@
   0% {
     transform: translate(0px, 25px);
     opacity: 0;
-  } 
+  }
   100% {
     transform: translate(0px, 0px);
     opacity: 1;
@@ -47,7 +48,7 @@
     transform: translate(0px, 25px);
     opacity: 0;
     letter-spacing: -20px;
-  } 
+  }
   100% {
     transform: translate(0px, 0px);
     opacity: 1;
@@ -56,13 +57,37 @@
 }
 
 @keyframes skew {
-  0% { 
+  0% {
     transform: skew(0);
   }
   50% {
     transform: skew(-10deg, -30deg) scale(0.75);
   }
-  100% { 
+  100% {
     transform: skew(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, -0px);
   }
 }

@@ -4,17 +4,42 @@ import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 
-const introImgs = ['starburst'];
-const blurbImgs = ['anchor'];
-const hobbyImgs = ['guitar', 'illust', 'anime', 'coffee', 'singing'];
+const hobbyImgs = [
+  {
+    image: 'guitar',
+    caption: 'playing fingerstyle guitar'
+  },
+  {
+    image: 'coffee',
+    caption: 'coffee'
+  },
+  {
+    image: 'illust',
+    caption: 'creating illustrations'
+  },
+  {
+    image: 'singing',
+    caption: 'singing'
+  },
+  {
+    image: 'anime',
+    caption: 'anime and manga'
+  }
+];
 
 function About() {
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const getScroll = () => {
       document.body.style.setProperty('--scroll',
         window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-    }, false);
+    }
+
+    window.addEventListener('scroll', getScroll, false);
     window.scrollTo(0, 0);
+
+    return () => {
+      window.removeEventListener('scroll', getScroll)
+    }
   }, []);
 
   /**
@@ -25,43 +50,53 @@ function About() {
    */
   function genImages(imgs, className) {
     return imgs.map((img) => {
+      const { image, caption } = img;
       return (
-        <img key={img} src={`./img/assets/${img}.png`} alt="" className={`${className} ${className}__${img}`} />
+        <span className={`${className}__container ${className}__${image}`}>
+          <img key={image} src={`./img/assets/${image}.png`} alt="" className={`${className}`} />
+          <p className={`${className}__caption`}>{caption}</p>
+        </span>
       )
     })
   }
 
   return (
     <React.Fragment>
-      <Section name="message">
+      {/* <Section name="message">
         <p>This page is still under construction!</p>
-      </Section>
+      </Section> */}
 
       <Section name="intro">
-        {genImages(introImgs, 'intro__image')}
+        <img src='./img/assets/starburst.png' alt="" className="intro__image" />
         <div className="content intro__content">
           <h2>Hi! I'm Bella.</h2>
           <p>
-            I am a first-year student at the University of Washington intending on majoring
-            in Informatics. I started out 100% sure I wanted to be a graphic designer, but I
-            unexpectedly fell in love with web programming instead. Now, I strive to bridge
-            the worlds between visual communication and technology. If I’m able to make even
-            one person’s life easier or more enjoyable through my creations, then I can be
-            satisfied.
+            I am a first-year student at the University of Washington intending on majoring in Informatics. I started out 100% sure I wanted to be a graphic designer, but I unexpectedly fell in love with web programming instead. Now, I strive to bridge the worlds between visual communication and technology. If I’m able to make even one person’s life easier or more enjoyable through my creations, then I can be satisfied.
           </p>
           <p>
-            I’m currently working on UX Design, Back-End Development, and Web Development for
-            the Stoma Project in the Sensors, Energy, and Automation Laboratory, as well as
-            Graphic Design for @smirk_uw on Instagram.
+            I’m currently working on UX Design, Back-End Development, and Web Development for the Stoma Project in the Sensors, Energy, and Automation Laboratory, as well as Graphic Design for @smirk_uw on Instagram.
           </p>
           <p>
-            In my own time, I like to create illustrations of my favorite characters, record
-            covers of my favorite songs, and dance in my room as I play my favorite playlist
-            through my Bluetooth speaker. If I’m not on campus, you can most definitely find
-            me at my favorite restaurant, Meesum Pastry, indulging in the nostalgic and
-            comforting taste of Taiwanese cuisine.
+            In my own time, I like to create illustrations of my favorite characters, record covers of my favorite songs, and dance in my room as I play my favorite playlist through my Bluetooth speaker. If I’m not on campus, you can most definitely find me at my favorite restaurant, Meesum Pastry, indulging in the nostalgic and comforting taste of Taiwanese cuisine.
           </p>
         </div>
+      </Section>
+
+      <Section name="blurb">
+        <div className="content blurb__content">
+          <h2>Redefining home.</h2>
+          <p>San Diego, Fremont, Hsinchu, Taichung, Kaohsiung, Seattle.</p>
+          <p>
+            A big move has marked the beginning of every new chapter of my life, from childhood to adulthood, foolishness to maturity. Though I was able to experience various cultures, ideas, and people, I never really had a place I considered “home”.
+          </p>
+          <p>
+            With the turn of each page, I lamented my lack of a reliable anchor point. I desired a place to call my hometown, to grow up with childhood friends with shared memories and secrets.
+          </p>
+          <p>
+            One night, as I looked around me and saw the faces of my smiling friends, I had an epiphany. “Home” did not have to be a defined area; that definition is merely a suggestion, merely a construct. Stories shared over barbecue on a Friday night. Singing our favorite songs as we stroll around the art museum. Laughing so hard that we’re sure six-pack abs will appear the next morning. Home. I’ve found home in the areas where our varied worlds with different backgrounds, ideas, and perspectives overlap, where they come together to lay the foundation for our shared memories and experiences. My new realization of home has made me proud of my identity, cherish those I have around me, and able to find solace no matter where my story takes place.
+          </p>
+        </div>
+        <img src="./img/assets/anchor.png" alt="" className="blurb__image" />
       </Section>
 
       <Section name="hobby">
