@@ -48,6 +48,9 @@
 .nav__link-list__item:hover {
   font-size: 50px;
 }
+.nav__link-list a {
+  color: #DCD7CE;
+}
 
 .nav__link-list__item--current {
   font-size: 50px;
