@@ -1,64 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-class Section extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { active: false };
-    this.sectionRef = React.createRef();
-    window.addEventListener('scroll', this.getIndex);
-  }
+function Section({ name, children }) {
+  const [active, setActive] = useState(false);
+  const ref = useRef();
 
-  componentDidMount() {
-    this.getIndex();
-    this.sectionRef.current.addEventListener('load', this.getIndex);
-  }
+  useEffect(() => {
+    getIndex();
+    window.addEventListener('scroll', getIndex);
+  }, []);
 
   /**
    * Gets the current position of the image and updates the state to true if the image is visible
    * on the screen and false if it is not.
    */
-  getIndex = () => {
+  const getIndex = () => {
     let top = 0;
     let bottom = 0;
 
-    if (this.sectionRef.current) {
-      let currentPosition = this.sectionRef.current.getBoundingClientRect();
+    if (ref.current) {
+      let currentPosition = ref.current.getBoundingClientRect();
       top = currentPosition.top;
       bottom = currentPosition.bottom;
     }
 
     if (top <= (window.innerHeight || document.documentElement.clientHeight)) {
-      this.setState({ active: true });
+      setActive(true);
     }
 
     if (bottom < 0 || top >= (window.innerHeight || document.documentElement.clientHeight)) {
-      this.setState({ active: false });
+      setActive(false);
     }
   }
 
-  /**
-   * If the section is active, returns a corresponding string to be used as a class name.
-   * @returns {String} - either 'active' or an empty string.
-   */
-  setActive() {
-    if (this.state.active) {
-      return 'section--active';
-    }
-    return '';
-  }
-
-  render() {
-    return (
-      <section
-        ref={this.sectionRef}
-        className={`section ${this.props.name} ${this.setActive()}`}
-      >
-        <div className="container">
-          {this.props.children}
-        </div>
-      </section>
-    );
-  }
+  return (
+    <section
+      ref={ref}
+      className={`section ${name} ${active ? 'section--active' : ''}`}
+    >
+      <div className="container">
+        {children}
+      </div>
+    </section>
+  );
 }
 
 export default Section;
