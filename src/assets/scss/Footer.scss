@@ -4,8 +4,8 @@
 
 @use 'base';
 
-$primary-color: #DCD7CE;
-$secondary-color: #483F3F;
+$primary-color: #dcd7ce;
+$secondary-color: #483f3f;
 $tertiary-color: #817676;
 
 .footer {
@@ -17,7 +17,6 @@ $tertiary-color: #817676;
 
   &__image {
     width: 47.5%;
-    transform: rotate(-4.63deg);
     margin-left: -149px;
   }
 
@@ -34,7 +33,7 @@ $tertiary-color: #817676;
 
 .footer__link-list {
   font-size: 24px;
-  
+
   a {
     color: $tertiary-color;
   }

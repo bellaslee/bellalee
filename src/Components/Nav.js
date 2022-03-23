@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const links = [
   {
     page: "Home",
-    link: "/"
+    url: "/"
   },
   {
     page: "About",
-    link: "./about"
+    url: "./about"
   }
 ]
 
@@ -19,24 +19,25 @@ function Nav({ currentPage }) {
   const topRef = useRef();
   const bottomRef = useRef();
 
+  const renderLinks = links.map((link) => {
+    return (
+      <li
+        key={link.page}
+        className={`nav__link-list__item ${link.page === currentPage ? 'nav__link-list__item--current' : ''}`}
+      >
+        <Link to={link.url}>{link.page}</Link>
+      </li>
+    )
+  });
+
   return (
     <section className="nav">
       <section className={`nav__menu ${isOpen ? '' : 'nav__menu--hidden'}`}>
         <ul className="link-list nav__link-list">
-          {
-            links.map((link) => {
-              return (
-                <li
-                  key={link.page}
-                  className={`nav__link-list__item ${link.page === currentPage ? 'nav__link-list__item--current' : ''}`}
-                >
-                  <Link to={link.link}>{link.page}</Link>
-                </li>
-              )
-            })
-          }
+          {renderLinks}
         </ul>
       </section>
+
       <div
         className="nav__button"
         onClick={() => {

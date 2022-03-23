@@ -176,7 +176,6 @@ h3 {
 }
 .footer__image {
   width: 47.5%;
-  transform: rotate(-4.63deg);
   margin-left: -149px;
 }
 .footer__link-list__item:hover {
