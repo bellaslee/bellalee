@@ -8,21 +8,12 @@ const headerImgs = ['bee'];
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];
 
 function Home() {
-  const [navShown, setNavShown] = useState(false);
-
   useEffect(() => {
     window.addEventListener('scroll', () => {
       document.body.style.setProperty('--scroll',
         window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
     }, false);
   }, []);
-
-  /**
-   * Updates whether or not the navigation is showing.
-   */
-  function updateNavShown() {
-    setNavShown(navShown === true ? false : true);
-  }
 
   /**
    * Generates the images needed for a section from an array of image filenames.
@@ -76,7 +67,7 @@ function Home() {
       </Section>
 
       <Footer />
-      <Nav active={navShown} onClick={updateNavShown} currentPage="Home" />
+      <Nav currentPage="Home" />
     </div>
   );
 }
