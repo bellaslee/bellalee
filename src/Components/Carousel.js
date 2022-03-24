@@ -6,19 +6,13 @@ function Carousel({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState([]);
   const [highlightIndex, setHighlightIndex] = useState(2);
-  const [displacement, setDisplacement] = useState(0);
+  const [displacement, setDisplacement] = useState(248);
   const containerRef = useRef();
   const imgRef = useRef();
 
   const maxIndex = items.length - 1;
 
   useEffect(() => {
-    window.addEventListener('load', () => {
-      setDisplacement(imgRef.current.clientWidth);
-    });
-
-    setDisplacement(imgRef.current.clientWidth);
-
     const firstItem = activeIndex - 2 < 0 ? (activeIndex - 1 < 0 ? maxIndex - 1 : maxIndex) : activeIndex - 2;
     const secondItem = activeIndex - 1 < 0 ? maxIndex : activeIndex - 1;
     const fourthItem = activeIndex + 1 > maxIndex ? 0 : activeIndex + 1;
@@ -26,12 +20,17 @@ function Carousel({ items }) {
     setVisibleItems([items[firstItem], items[secondItem], items[activeIndex], items[fourthItem], items[lastItem]])
   }, [activeIndex, maxIndex, items]);
 
+  useEffect(() => {
+    if (imgRef.current) {
+      setDisplacement(imgRef.current.clientWidth)
+    }
+  }, [visibleItems]);
+
   const renderItems = visibleItems.map((item, index) => {
     const { image, title, text, route, url } = item;
     const imageElement = <img src={`./img/${image}`} alt={title} className="carousel__item__image" />;
     const linkRoute = route && index === highlightIndex ? <Link to={route}>{imageElement}</Link> : null;
     const linkUrl = url && index === highlightIndex ? <a href={route}>{imageElement}</a> : null;
-
     return (
       <div
         ref={imgRef}
@@ -51,6 +50,7 @@ function Carousel({ items }) {
   });
 
   function onMove(direction) {
+    // setDisplacement(imgRef.current.clientWidth);
     document.body.style.setProperty('--displacement', `${direction === 'right' ? '-' : ''}${displacement + 25}px`);
     setHighlightIndex(null);
     const classList = containerRef.current.classList;
