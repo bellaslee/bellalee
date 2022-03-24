@@ -148,7 +148,7 @@ h3 {
   min-height: 100vh;
   max-height: fit-content;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .link-list {
