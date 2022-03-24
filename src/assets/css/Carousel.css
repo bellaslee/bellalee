@@ -1,0 +1,68 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  position: relative;
+}
+.carousel .item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  transition: 1s;
+}
+.carousel .item-container--updated-left {
+  animation: slideLeft 0.5s ease-in-out;
+  animation-direction: reverse;
+}
+.carousel .item-container--updated-right {
+  animation: slideRight 0.5s ease-in-out;
+  animation-direction: reverse;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translate(55%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translate(-55%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+.carousel__item {
+  width: 55%;
+  margin-left: 12px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+.carousel__item--active {
+  opacity: 1;
+}
+.carousel__item--active:hover {
+  transform: scale(1.03);
+}
+.carousel__item__image {
+  width: 100%;
+  border-radius: 3%;
+  border: solid 1px #817676;
+}
+.carousel .button {
+  z-index: 2;
+  transition: 0.3s;
+}
+.carousel .button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=Carousel.css.map */

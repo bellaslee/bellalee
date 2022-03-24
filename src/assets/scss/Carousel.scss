@@ -1,0 +1,76 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  position: relative;
+
+  .item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    transition: 1s;
+
+    &--updated-left {
+      animation: slideLeft 0.5s ease-in-out;
+      animation-direction: reverse;
+    }
+
+    &--updated-right {
+      animation: slideRight 0.5s ease-in-out;
+      animation-direction: reverse;
+    }
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translate(55%, 0%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translate(-55%, 0%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+
+  &__item {
+    width: 55%;
+    margin-left: 12px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    transition: 0.3s;
+    opacity: 0.5;
+
+    &--active {
+      opacity: 1;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    &__image {
+      width: 100%;
+      border-radius: 3%;
+      border: solid 1px #817676;
+    }
+  }
+
+  .button {
+    z-index: 2;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

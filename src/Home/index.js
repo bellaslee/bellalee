@@ -3,8 +3,23 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Section from '../Components/Section';
+import Carousel from '../Components/Carousel';
 
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];
+const projects = [
+  {
+    image: 'projects/website.png',
+    title: 'personal website',
+    text: 'the second iteration of my website.',
+    route: '/projects/personal-website'
+  },
+  {
+    image: 'projects/with-friends.jpg',
+    title: 'with friends',
+    text: 'my favorite Design 166 project.',
+    route: '/projects/with-friends'
+  }
+];
 
 function Home() {
   useEffect(() => {
@@ -59,6 +74,11 @@ function Home() {
             In my own time, I like to create illustrations of my favorite characters, record covers of my favorite songs, and dance in my room as I play my favorite playlist through my Bluetooth speaker. If I’m not on campus, you can most definitely find me at my favorite restaurant, Meesum Pastry, indulging in the nostalgic and comforting taste of Taiwanese cuisine.
           </p>
         </div>
+      </Section>
+
+      <Section name="projects">
+        <h2>My projects.</h2>
+        <Carousel items={projects} />
       </Section>
 
       <Footer />

@@ -5,8 +5,8 @@
 @use 'animations';
 
 $font-stack: 'Barlow', sans-serif;
-$primary-color: #DCD7CE;
-$secondary-color: #483F3F;
+$primary-color: #dcd7ce;
+$secondary-color: #483f3f;
 $tertiary-color: #817676;
 
 %flex {
@@ -23,7 +23,11 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, p, img {
+h1,
+h2,
+h3,
+p,
+img {
   transition: 0.5s;
 }
 
@@ -46,7 +50,6 @@ h3 {
   color: $tertiary-color;
   font-weight: bold;
   font-size: 16px;
-  margin-left: 10px;
 }
 
 .section--active {
@@ -54,9 +57,11 @@ h3 {
     --h1-letter-spacing: -8px;
     animation: fadeInExpand 1s;
   }
-  
-  h2, p, ul {
-    animation: fadeInUp 2s;  
+
+  h2,
+  p,
+  ul {
+    animation: fadeInUp 2s;
   }
 }
 
@@ -93,7 +98,7 @@ h3 {
   .content {
     width: 40% !important;
     top: 0;
-  } 
+  }
 
   h1 {
     font-size: 72px;
@@ -114,7 +119,7 @@ h3 {
     font-size: 12px;
     margin-left: 5px;
   }
-  
+
   .content {
     font-size: 12px;
     position: static !important;
