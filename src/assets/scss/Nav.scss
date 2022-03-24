@@ -57,9 +57,8 @@ $tertiary-color: #817676;
     font-size: 50px;
   }
 
-  a,
-  a:visited {
-    color: $primary-color;
+  a {
+    color: $primary-color !important;
   }
 }
 

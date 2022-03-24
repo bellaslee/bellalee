@@ -20,7 +20,7 @@ const links = [
 
 function Footer() {
   const renderLinks = links.map((link) => {
-    const hasUrl = <a href={link.url}>{link.page}</a>
+    const hasUrl = <a href={link.url} target="_blank" rel="noreferrer">{link.page}</a>
 
     return (
       <li

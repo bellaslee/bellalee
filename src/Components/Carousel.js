@@ -6,11 +6,19 @@ function Carousel({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState([]);
   const [highlightIndex, setHighlightIndex] = useState(2);
+  const [displacement, setDisplacement] = useState(0);
   const containerRef = useRef();
+  const imgRef = useRef();
 
   const maxIndex = items.length - 1;
 
   useEffect(() => {
+    window.addEventListener('load', () => {
+      setDisplacement(imgRef.current.clientWidth);
+    });
+
+    setDisplacement(imgRef.current.clientWidth);
+
     const firstItem = activeIndex - 2 < 0 ? (activeIndex - 1 < 0 ? maxIndex - 1 : maxIndex) : activeIndex - 2;
     const secondItem = activeIndex - 1 < 0 ? maxIndex : activeIndex - 1;
     const fourthItem = activeIndex + 1 > maxIndex ? 0 : activeIndex + 1;
@@ -26,6 +34,7 @@ function Carousel({ items }) {
 
     return (
       <div
+        ref={imgRef}
         key={index}
         className={`carousel__item ${index === highlightIndex ? 'carousel__item--active' : ''}`}>
         {linkRoute}
@@ -41,32 +50,24 @@ function Carousel({ items }) {
     );
   });
 
-  function onLeft() {
+  function onMove(direction) {
+    document.body.style.setProperty('--displacement', `${direction === 'right' ? '-' : ''}${displacement + 25}px`);
     setHighlightIndex(null);
     const classList = containerRef.current.classList;
-    classList.add('item-container--updated-left');
+    classList.add(`item-container--updated-${direction}`);
     setTimeout(() => {
-      classList.remove('item-container--updated-left');
+      classList.remove(`item-container--updated-${direction}`);
       setHighlightIndex(2);
-      setActiveIndex(activeIndex - 1 < 0 ? maxIndex : activeIndex - 1);
-    }, 500);
-  }
-
-  function onRight() {
-    setHighlightIndex(null);
-    const classList = containerRef.current.classList;
-    classList.add('item-container--updated-right');
-    setTimeout(() => {
-      classList.remove('item-container--updated-right');
-      setHighlightIndex(2);
-      setActiveIndex(activeIndex + 1 > maxIndex ? 0 : activeIndex + 1);
+      setActiveIndex(direction === 'left'
+        ? activeIndex - 1 < 0 ? maxIndex : activeIndex - 1
+        : activeIndex + 1 > maxIndex ? 0 : activeIndex + 1);
     }, 500);
   }
 
   return (
     <div className="carousel">
       <img
-        onClick={onLeft}
+        onClick={() => onMove('left')}
         className="button button__left"
         src="img/assets/button-left.png"
         alt="left button"
@@ -75,7 +76,7 @@ function Carousel({ items }) {
         {renderItems}
       </div>
       <img
-        onClick={onRight}
+        onClick={() => onMove('right')}
         className="button button__right"
         src="img/assets/button-right.png"
         alt="right button"
