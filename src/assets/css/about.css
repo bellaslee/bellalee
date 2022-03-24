@@ -137,7 +137,7 @@ h3 {
 .section--active h2,
 .section--active p,
 .section--active ul {
-  animation: fadeInUp 2s;
+  animation: fadeInUp 1s;
 }
 
 .section {

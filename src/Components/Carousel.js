@@ -22,8 +22,8 @@ function Carousel({ items }) {
   const renderItems = visibleItems.map((item, index) => {
     const { image, title, text, route, url } = item;
     const imageElement = <img src={`./img/${image}`} alt={title} className="carousel__item__image" />;
-    const linkRoute = route ? <Link to={route}>{imageElement}</Link> : null;
-    const linkUrl = url ? <a href={route}>{imageElement}</a> : null;
+    const linkRoute = route && index === highlightIndex ? <Link to={route}>{imageElement}</Link> : null;
+    const linkUrl = url && index === highlightIndex ? <a href={route}>{imageElement}</a> : null;
 
     return (
       <div
@@ -31,6 +31,7 @@ function Carousel({ items }) {
         className={`carousel__item ${index === highlightIndex ? 'carousel__item--active' : ''}`}>
         {linkRoute}
         {linkUrl}
+        {!(index === highlightIndex) ? imageElement : null}
         <h3>
           {title}
         </h3>

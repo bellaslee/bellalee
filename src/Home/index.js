@@ -11,13 +11,13 @@ const projects = [
     image: 'projects/website.png',
     title: 'personal website',
     text: 'the second iteration of my website.',
-    route: '/projects/personal-website'
+    route: '/personal-website'
   },
   {
     image: 'projects/with-friends.jpg',
     title: 'with friends',
     text: 'my favorite Design 166 project.',
-    route: '/projects/with-friends'
+    route: '/with-friends'
   }
 ];
 
