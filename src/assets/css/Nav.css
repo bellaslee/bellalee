@@ -22,7 +22,7 @@
 
 .nav__menu {
   background-color: rgba(72, 63, 63, 0.85);
-  color: #DCD7CE;
+  color: #dcd7ce;
   height: 100vh;
   width: 66%;
   top: 0;
@@ -48,8 +48,9 @@
 .nav__link-list__item:hover {
   font-size: 50px;
 }
-.nav__link-list a {
-  color: #DCD7CE;
+.nav__link-list a,
+.nav__link-list a:visited {
+  color: #dcd7ce;
 }
 
 .nav__link-list__item--current {

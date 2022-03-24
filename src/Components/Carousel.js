@@ -15,7 +15,6 @@ function Carousel({ items }) {
     const secondItem = activeIndex - 1 < 0 ? maxIndex : activeIndex - 1;
     const fourthItem = activeIndex + 1 > maxIndex ? 0 : activeIndex + 1;
     const lastItem = activeIndex + 2 > maxIndex ? (activeIndex + 1 > maxIndex ? 1 : 0) : activeIndex + 2;
-    console.log(firstItem, secondItem, activeIndex, fourthItem, lastItem);
     setVisibleItems([items[firstItem], items[secondItem], items[activeIndex], items[fourthItem], items[lastItem]])
   }, [activeIndex, maxIndex, items]);
 
@@ -43,7 +42,7 @@ function Carousel({ items }) {
   });
 
   function onLeft() {
-    setHighlightIndex(4);
+    setHighlightIndex(null);
     const classList = containerRef.current.classList;
     classList.add('item-container--updated-left');
     setTimeout(() => {
@@ -54,7 +53,7 @@ function Carousel({ items }) {
   }
 
   function onRight() {
-    setHighlightIndex(0);
+    setHighlightIndex(null);
     const classList = containerRef.current.classList;
     classList.add('item-container--updated-right');
     setTimeout(() => {
