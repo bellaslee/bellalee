@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
+import Carousel from '../Components/Carousel';
 
 const hobbyImgs = [
   {
@@ -24,6 +25,25 @@ const hobbyImgs = [
   {
     image: 'anime',
     caption: 'anime and manga'
+  }
+];
+
+const illustrations = [
+  {
+    image: 'illustrations/thoma.jpg',
+    text: 'Genshin Impact fanart. September 2021.'
+  },
+  {
+    image: 'illustrations/yuta.png',
+    text: 'Jujutsu Kaisen 0 fanart. March 2022.'
+  },
+  {
+    image: 'illustrations/delusion-childe.png',
+    text: 'Genshin Impact fanart. July 2021.'
+  },
+  {
+    image: 'illustrations/snow-childe.png',
+    text: 'Genshin Impact fanart. August 2021.'
   }
 ];
 
@@ -62,10 +82,6 @@ function About() {
 
   return (
     <React.Fragment>
-      {/* <Section name="message">
-        <p>This page is still under construction!</p>
-      </Section> */}
-
       <Section name="intro">
         <img src='./img/assets/starburst.png' alt="" className="intro__image" />
         <div className="content intro__content">
@@ -106,6 +122,11 @@ function About() {
         <div className="hobby__images">
           {genImages(hobbyImgs, 'hobby__image')}
         </div>
+      </Section>
+
+      <Section name="illustrations">
+        <h2>I'm a big fan of pretty fictional characters.</h2>
+        <Carousel items={illustrations} />
       </Section>
 
       <Footer />

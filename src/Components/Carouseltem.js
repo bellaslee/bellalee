@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-function CarouselItem({ onImageRender, returnWidth, className, item }) {
+function CarouselItem({ onImageRender, className, item }) {
   const ref = useRef();
 
   const { image, title, text, route, url } = item;
@@ -18,6 +18,7 @@ function CarouselItem({ onImageRender, returnWidth, className, item }) {
       className={className}>
       {linkRoute}
       {linkUrl}
+      {!route && !url ? imageElement : null}
       <h3>
         {title}
       </h3>

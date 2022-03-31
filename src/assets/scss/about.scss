@@ -115,6 +115,19 @@
   }
 }
 
+.illustrations {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    align-self: flex-start;
+    width: 46%;
+    margin-left: 24px;
+  }
+}
+
 .section--active {
   .intro__image {
     --firstScale: 1;
@@ -162,7 +175,7 @@
   .blurb {
     display: flex;
     flex-direction: column;
-    
+
     &__image {
       align-self: flex-start;
       margin-top: 100%;
@@ -175,7 +188,11 @@
     }
 
     &__image {
-      &__guitar, &__illust, &__anime, &__coffee, &__singing {
+      &__guitar,
+      &__illust,
+      &__anime,
+      &__coffee,
+      &__singing {
         margin: 15px;
 
         .hobby__image__caption {

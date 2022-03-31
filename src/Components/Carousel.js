@@ -13,7 +13,7 @@ function Carousel({ items }) {
   const renderItems = items.map((item, index) => {
     return (
       <CarouselItem
-        index={index}
+        key={index}
         className={`carousel__item`}
         item={item}
         onImageRender={getWidths}

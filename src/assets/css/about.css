@@ -286,6 +286,16 @@ h3 {
   margin: 31% -1000px 0% 950px;
 }
 
+.illustrations .container {
+  flex-direction: column;
+  align-items: center;
+}
+.illustrations h2 {
+  align-self: flex-start;
+  width: 46%;
+  margin-left: 24px;
+}
+
 .section--active .intro__image {
   --firstScale: 1;
   --secondScale: 0.5;
