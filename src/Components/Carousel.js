@@ -1,34 +1,13 @@
 import '../assets/css/Carousel.css';
-import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import CarouselItem from './Carouseltem';
 
 function Carousel({ items }) {
   const [totalWidth, setTotalWidth] = useState(0);
-  // const [displacement, setDisplacement] = useState(248);
-  // const containerRef = useRef();
-  // const imgRef = useRef();
 
-  useEffect(() => {
-    const lastIndex = items.length - 1;
-    if (items.length > 2) {
-      items.splice(0, 0, items[lastIndex]);
-      items.splice(lastIndex + 2, 0, items[1]);
-    }
-    console.log(items);
-  }, [items]);
-
-  const getWidth = (width) => {
-    setTotalWidth(totalWidth + width + 12);
-    console.log('total width', totalWidth);
+  const getWidths = (width) => {
+    setTotalWidth(totalWidth + width);
     document.body.style.setProperty('--totalWidth', `${totalWidth}px`);
-  };
-
-  const getOffset = (offset) => {
-    console.log(offset);
-    document.querySelector('.item-container').scrollLeft = offset;
-    console.log('item container', document.querySelector('.item-container'));
-    console.log('page x offset', document.querySelector('.item-container').pageXOffset)
   };
 
   const renderItems = items.map((item, index) => {
@@ -37,19 +16,25 @@ function Carousel({ items }) {
         index={index}
         className={`carousel__item`}
         item={item}
-        onImageRender={getWidth}
-        returnOffset={getOffset} />
+        onImageRender={getWidths}
+      />
     );
   });
 
   function onMove(direction) {
-
+    if (totalWidth > window.innerWidth) {
+      if (direction === 'left') {
+        document.querySelector('.item-container').scrollLeft -= totalWidth - window.innerWidth;
+      } else if (direction === 'right') {
+        document.querySelector('.item-container').scrollLeft += totalWidth - window.innerWidth;
+      }
+    }
   }
 
   return (
     <div className="carousel">
       <img
-        onClick={onMove('left')}
+        onClick={() => onMove('left')}
         className="button button__left"
         src="img/assets/button-left.png"
         alt="left button"
@@ -58,7 +43,7 @@ function Carousel({ items }) {
         {renderItems}
       </div>
       <img
-        onClick={onMove('right')}
+        onClick={() => onMove('right')}
         className="button button__right"
         src="img/assets/button-right.png"
         alt="right button"

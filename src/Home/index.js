@@ -18,12 +18,6 @@ const projects = [
     title: 'with friends',
     text: 'my favorite Design 166 project.',
     route: '/with-friends'
-  },
-  {
-    image: 'projects/old-design.png',
-    title: 'bellalee 1.0',
-    text: 'my old website design.',
-    route: '/old-website'
   }
 ];
 

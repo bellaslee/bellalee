@@ -12,6 +12,7 @@
   overflow-x: hidden;
   width: var(totalWidth);
   height: 60vh;
+  scroll-behavior: smooth;
 }
 .carousel .item-container--updated-left {
   animation: slideLeft 0.5s ease-in-out;
