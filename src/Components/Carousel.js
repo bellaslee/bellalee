@@ -1,5 +1,5 @@
 import '../assets/css/Carousel.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import CarouselItem from './Carouseltem';
 
 function Carousel({ items }) {
@@ -24,9 +24,9 @@ function Carousel({ items }) {
   function onMove(direction) {
     if (totalWidth > window.innerWidth) {
       if (direction === 'left') {
-        document.querySelector('.item-container').scrollLeft -= totalWidth - window.innerWidth;
+        document.querySelector('.item-container').scrollLeft -= 400;
       } else if (direction === 'right') {
-        document.querySelector('.item-container').scrollLeft += totalWidth - window.innerWidth;
+        document.querySelector('.item-container').scrollLeft += 400;
       }
     }
   }

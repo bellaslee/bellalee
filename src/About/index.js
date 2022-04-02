@@ -38,6 +38,10 @@ const illustrations = [
     text: 'Jujutsu Kaisen 0 fanart. March 2022.'
   },
   {
+    image: 'illustrations/aki.jpg',
+    text: 'Chainsaw Man fanart. April 2022.'
+  },
+  {
     image: 'illustrations/delusion-childe.png',
     text: 'Genshin Impact fanart. July 2021.'
   },
