@@ -1,5 +1,5 @@
 import '../assets/css/home.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Section from '../Components/Section';
@@ -11,13 +11,13 @@ const projects = [
     image: 'projects/website.png',
     title: 'personal website',
     text: 'the second iteration of my website.',
-    route: '/personal-website'
+    route: '/projects/personal-website'
   },
   {
     image: 'projects/with-friends.jpg',
     title: 'with friends',
     text: 'my favorite Design 166 project.',
-    route: '/with-friends'
+    route: '/projects/with-friends'
   }
 ];
 
@@ -51,7 +51,7 @@ function Home() {
   }
 
   return (
-    <div className="wrapper">
+    <React.Fragment>
       <Section name="header">
         <img src="./img/assets/bee.png" alt="" className="header__image" />
         <div className="content header__content">
@@ -83,7 +83,7 @@ function Home() {
 
       <Footer />
       <Nav currentPage="Home" />
-    </div>
+    </React.Fragment>
   );
 }
 

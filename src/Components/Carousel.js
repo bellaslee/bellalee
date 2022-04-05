@@ -22,11 +22,12 @@ function Carousel({ items }) {
   });
 
   function onMove(direction) {
+    let scrollAmount = window.innerWidth / 2
     if (totalWidth > window.innerWidth) {
       if (direction === 'left') {
-        document.querySelector('.item-container').scrollLeft -= 400;
+        document.querySelector('.item-container').scrollLeft -= scrollAmount;
       } else if (direction === 'right') {
-        document.querySelector('.item-container').scrollLeft += 400;
+        document.querySelector('.item-container').scrollLeft += scrollAmount;
       }
     }
   }

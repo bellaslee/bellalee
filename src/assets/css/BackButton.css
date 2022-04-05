@@ -1,0 +1,15 @@
+.back-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  top: 6%;
+  left: 3%;
+  z-index: 20%;
+}
+.back-button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=BackButton.css.map */
