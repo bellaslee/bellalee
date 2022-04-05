@@ -8,6 +8,7 @@ $font-stack: 'Barlow', sans-serif;
 $primary-color: #dcd7ce;
 $secondary-color: #483f3f;
 $tertiary-color: #817676;
+$accent-color: #912921;
 
 %flex {
   display: flex;
@@ -81,22 +82,30 @@ h3 {
   @extend %flex;
 }
 
+a {
+  color: $accent-color;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
 .link-list {
   list-style-type: none;
   padding-left: 0;
-}
 
-.link-list li {
-  margin-bottom: 24px;
-  transition: 0.5s;
-}
+  li {
+    margin-bottom: 24px;
+    transition: 0.5s;
 
-.link-list a {
-  text-decoration: none;
-}
+    a {
+      text-decoration: none;
 
-.link-list a:visited {
-  color: inherit;
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1200px) {

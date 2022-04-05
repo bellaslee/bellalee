@@ -151,21 +151,25 @@ h3 {
   overflow: hidden;
 }
 
+a {
+  color: #912921;
+}
+a:visited {
+  color: inherit;
+}
+
 .link-list {
   list-style-type: none;
   padding-left: 0;
 }
-
 .link-list li {
   margin-bottom: 24px;
   transition: 0.5s;
 }
-
-.link-list a {
+.link-list li a {
   text-decoration: none;
 }
-
-.link-list a:visited {
+.link-list li a:visited {
   color: inherit;
 }
 
@@ -196,6 +200,30 @@ h3 {
     margin-right: auto;
     width: 75% !important;
   }
+}
+.project h2,
+.project h3,
+.project p,
+.illust h2,
+.illust h3,
+.illust p {
+  margin: 12px;
+  max-width: 30vw;
+}
+.project img,
+.illust img {
+  max-height: 90vh;
+  max-width: 50vw;
+  border: 1px solid #817676;
+  border-radius: 3%;
+}
+
+.project .container {
+  flex-direction: column;
+}
+
+.illust .process .container {
+  align-items: flex-start;
 }
 
 /*# sourceMappingURL=Article.css.map */

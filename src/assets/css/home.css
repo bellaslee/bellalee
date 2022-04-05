@@ -151,21 +151,25 @@ h3 {
   overflow: hidden;
 }
 
+a {
+  color: #912921;
+}
+a:visited {
+  color: inherit;
+}
+
 .link-list {
   list-style-type: none;
   padding-left: 0;
 }
-
 .link-list li {
   margin-bottom: 24px;
   transition: 0.5s;
 }
-
-.link-list a {
+.link-list li a {
   text-decoration: none;
 }
-
-.link-list a:visited {
+.link-list li a:visited {
   color: inherit;
 }
 

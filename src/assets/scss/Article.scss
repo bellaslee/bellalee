@@ -1,1 +1,37 @@
 @use 'base';
+
+$primary-color: #dcd7ce;
+$secondary-color: #483f3f;
+$tertiary-color: #817676;
+$accent-color: #912921;
+
+.project,
+.illust {
+  h2,
+  h3,
+  p {
+    margin: 12px;
+    max-width: 30vw;
+  }
+
+  img {
+    max-height: 90vh;
+    max-width: 50vw;
+    border: 1px solid $tertiary-color;
+    border-radius: 3%;
+  }
+}
+
+.project {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.illust {
+  .process {
+    .container {
+      align-items: flex-start;
+    }
+  }
+}

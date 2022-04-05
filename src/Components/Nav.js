@@ -45,14 +45,14 @@ function Nav({ currentPage }) {
         }}>
         <img
           ref={topRef}
-          src={`./img/assets/nav-rectangle-${isOpen ? 'light' : 'dark'}.png`}
-          alt=""
+          src={`/img/assets/nav-rectangle-${isOpen ? 'light' : 'dark'}.png`}
+          alt="navigation"
           className={`nav__icon-component nav__icon-component__top ${isOpen ? 'nav__icon-component__top--active' : ''}`}
         />
         <img
           ref={bottomRef}
-          src={`./img/assets/nav-rectangle-${isOpen ? 'light' : 'dark'}.png`}
-          alt=""
+          src={`/img/assets/nav-rectangle-${isOpen ? 'light' : 'dark'}.png`}
+          alt="navigation"
           className={`nav__icon-component nav__icon-component__bottom ${isOpen ? 'nav__icon-component__bottom--active' : ''}`}
         />
       </div>

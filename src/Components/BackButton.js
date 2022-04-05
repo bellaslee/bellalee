@@ -8,7 +8,6 @@ function BackButton() {
   return (
     <div className="back-button" onClick={() => {
       navigate(-1);
-      console.log('clicked')
     }}>
       <span className="material-icons">arrow_back_ios</span> Back
     </div>

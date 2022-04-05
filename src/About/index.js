@@ -4,6 +4,7 @@ import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Carousel from '../Components/Carousel';
+import AboutBlurb from '../Components/AboutBlurb';
 
 const hobbyImgs = [
   {
@@ -31,23 +32,28 @@ const hobbyImgs = [
 const illustrations = [
   {
     image: 'illustrations/thoma.jpg',
-    text: 'Genshin Impact fanart. September 2021.'
+    text: 'Genshin Impact fanart. September 2021.',
+    route: '/illustrations/thoma'
   },
   {
     image: 'illustrations/yuta.png',
-    text: 'Jujutsu Kaisen 0 fanart. March 2022.'
+    text: 'Jujutsu Kaisen 0 fanart. March 2022.',
+    route: '/illustrations/yuta'
   },
   {
     image: 'illustrations/aki.jpg',
-    text: 'Chainsaw Man fanart. April 2022.'
+    text: 'Chainsaw Man fanart. April 2022.',
+    route: '/illustrations/aki'
   },
   {
     image: 'illustrations/delusion-childe.png',
-    text: 'Genshin Impact fanart. July 2021.'
+    text: 'Genshin Impact fanart. July 2021.',
+    route: '/illustrations/childe-delusion'
   },
   {
     image: 'illustrations/snow-childe.png',
-    text: 'Genshin Impact fanart. August 2021.'
+    text: 'Genshin Impact fanart. August 2021.',
+    route: '/illustrations/childe-snow'
   }
 ];
 
@@ -89,16 +95,7 @@ function About() {
       <Section name="intro">
         <img src='./img/assets/starburst.png' alt="" className="intro__image" />
         <div className="content intro__content">
-          <h2>Hi! I'm Bella.</h2>
-          <p>
-            I am a first-year student at the University of Washington intending on majoring in Informatics. I started out 100% sure I wanted to be a graphic designer, but I unexpectedly fell in love with web programming instead. Now, I strive to bridge the worlds between visual communication and technology. If I’m able to make even one person’s life easier or more enjoyable through my creations, then I can be satisfied.
-          </p>
-          <p>
-            I’m currently working on UX Design, Back-End Development, and Web Development for the Stoma Project in the Sensors, Energy, and Automation Laboratory, as well as Graphic Design for @smirk_uw on Instagram.
-          </p>
-          <p>
-            In my own time, I like to create illustrations of my favorite characters, record covers of my favorite songs, and dance in my room as I play my favorite playlist through my Bluetooth speaker. If I’m not on campus, you can most definitely find me at my favorite restaurant, Meesum Pastry, indulging in the nostalgic and comforting taste of Taiwanese cuisine.
-          </p>
+          <AboutBlurb />
         </div>
       </Section>
 
@@ -130,6 +127,9 @@ function About() {
 
       <Section name="illustrations">
         <h2>I'm a big fan of pretty fictional characters.</h2>
+        <p>
+          You can find more of my illustrations <a href="http://instagram.com/peachyxin" target="_blank" rel="noreferrer"> @peachyxin</a> on Instagram!
+        </p>
         <Carousel items={illustrations} />
       </Section>
 
