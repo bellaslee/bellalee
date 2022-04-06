@@ -1,12 +1,12 @@
 import { render } from 'react-dom';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from 'react-router-dom';
 import React from 'react';
-import Home from './home';
-import About from './about';
+import Home from './Home';
+import About from './About';
 import Article from './Components/Article';
 import WithFriends from './routes/WithFriends';
 import PersonalWebsite from './routes/PersonalWebsite';
@@ -19,7 +19,7 @@ import ChildeSnow from './routes/ChildeSnow';
 const rootElement = document.getElementById('root');
 
 render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -35,6 +35,6 @@ render(
         <Route path="/illustrations/childe-snow" element={<ChildeSnow />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   rootElement
 );
