@@ -95,6 +95,7 @@ export default function PersonalWebsite() {
             <li>How to factor out code redundancy on a larger scale.</li>
             <li>UX design in terms of navigation and priorities.</li>
             <li>CSS animation.</li>
+            <li>Fun JavaScript tricks I didn't get to learn in class.</li>
           </ul>
           This list will probably grow as I continue to improve and maintain my
           website! With this project, I also realized how much I love web

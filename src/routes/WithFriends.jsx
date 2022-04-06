@@ -5,8 +5,8 @@ export default function WithFriends() {
     <div className="project">
       <Section name="description">
         <img src="/img/projects/with-friends.jpg" alt="design project" />
-        <h2>With Friends</h2>
-        <h3>my favorite Design 166 project.</h3>
+        <h1>With Friends</h1>
+        <h3>my Design 166 project.</h3>
       </Section>
     </div>
   );

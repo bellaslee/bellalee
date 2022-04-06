@@ -7,19 +7,27 @@ $accent-color: #912921;
 
 .project,
 .illust {
+  h1 {
+    text-align: center;
+  }
+
   h2,
   h3,
   p {
     margin: 12px;
   }
 
-  p {
-    max-width: 48vw;
+  .info {
+    width: 75%;
+  }
+
+  .process {
+    .info {
+      width: 30%;
+    }
   }
 
   img {
-    max-height: 90vh;
-    max-width: 50vw;
     border: 1px solid $tertiary-color;
     border-radius: 3%;
   }
@@ -28,6 +36,11 @@ $accent-color: #912921;
 .project {
   .container {
     flex-direction: column;
+    width: 75%;
+  }
+
+  img {
+    max-width: 50vw;
   }
 
   .process,
@@ -44,6 +57,32 @@ $accent-color: #912921;
   .process {
     .container {
       align-items: flex-start;
+    }
+  }
+
+  img {
+    max-height: 90vh;
+    max-width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .illust {
+    .container {
+      flex-direction: column;
+      align-items: center !important;
+    }
+
+    .process {
+      .info {
+        width: 75%;
+      }
+    }
+  }
+
+  .project {
+    img {
+      max-width: 90vw;
     }
   }
 }

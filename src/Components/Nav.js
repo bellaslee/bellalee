@@ -9,7 +9,7 @@ const links = [
   },
   {
     page: "About",
-    url: "./about"
+    url: "../about"
   }
 ]
 

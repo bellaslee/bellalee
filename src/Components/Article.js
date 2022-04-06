@@ -6,9 +6,19 @@ import { Outlet } from 'react-router-dom';
 
 function Article() {
   useEffect(() => {
+    const getScroll = () => {
+      document.body.style.setProperty('--scroll',
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }
+
+    window.addEventListener('scroll', getScroll, false);
     window.scrollTo(0, 0);
-  }, [])
-  
+
+    return () => {
+      window.removeEventListener('scroll', getScroll)
+    }
+  }, []);
+
   return (
     <React.Fragment>
       <Outlet />

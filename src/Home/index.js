@@ -17,7 +17,7 @@ const projects = [
   {
     image: 'projects/with-friends.jpg',
     title: 'with friends',
-    text: 'my favorite Design 166 project.',
+    text: 'my Design 166 project.',
     route: '/projects/with-friends'
   }
 ];

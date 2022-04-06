@@ -22,7 +22,7 @@ function Carousel({ items }) {
   });
 
   function onMove(direction) {
-    let scrollAmount = window.innerWidth * 0.75;
+    let scrollAmount = window.innerWidth;
     if (totalWidth > window.innerWidth) {
       if (direction === 'left') {
         document.querySelector('.item-container').scrollLeft -= scrollAmount;
