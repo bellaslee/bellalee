@@ -46,14 +46,14 @@
   margin-right: 20%;
 }
 .nav__link-list__item:hover {
-  font-size: 50px;
+  font-size: 44px;
 }
 .nav__link-list a {
   color: #dcd7ce !important;
 }
 
 .nav__link-list__item--current {
-  font-size: 50px;
+  font-size: 44px;
 }
 
 /*# sourceMappingURL=Nav.css.map */

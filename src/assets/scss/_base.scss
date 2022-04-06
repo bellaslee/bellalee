@@ -91,19 +91,22 @@ a {
   }
 }
 
-.link-list {
-  list-style-type: none;
-  padding-left: 0;
+.footer,
+.nav {
+  .link-list {
+    list-style-type: none;
+    padding-left: 0;
 
-  li {
-    margin-bottom: 24px;
-    transition: 0.5s;
+    li {
+      margin-bottom: 24px;
+      transition: 0.5s;
 
-    a {
-      text-decoration: none;
+      a {
+        text-decoration: none;
 
-      &:visited {
-        color: inherit;
+        &:visited {
+          color: inherit;
+        }
       }
     }
   }

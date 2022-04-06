@@ -17,14 +17,12 @@ $accent-color: #912921;
     margin: 12px;
   }
 
-  .info {
-    width: 75%;
+  p {
+    align-self: flex-start;
   }
 
-  .process {
-    .info {
-      width: 30%;
-    }
+  .info {
+    width: 75%;
   }
 
   img {
@@ -34,9 +32,15 @@ $accent-color: #912921;
 }
 
 .project {
+  .description {
+    .container {
+      width: 100%;
+    }
+  }
+
   .container {
     flex-direction: column;
-    width: 75%;
+    width: 50%;
   }
 
   img {
@@ -57,6 +61,10 @@ $accent-color: #912921;
   .process {
     .container {
       align-items: flex-start;
+    }
+
+    .info {
+      width: 30%;
     }
   }
 
@@ -83,6 +91,10 @@ $accent-color: #912921;
   .project {
     img {
       max-width: 90vw;
+    }
+
+    .container {
+      width: 75%;
     }
   }
 }

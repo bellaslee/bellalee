@@ -8,6 +8,7 @@ export default function PersonalWebsite() {
         <h1>Personal Website</h1>
         <h3>the website you are looking at right now!</h3>
       </Section>
+
       <Section name="process">
         <h2>The process.</h2>
         <p>
@@ -53,6 +54,14 @@ export default function PersonalWebsite() {
           on Udemy. It was a lot of conent to go through in 3 days, but I also
           learned a lot of skills that I applied to this project immediately.
         </p>
+        <p>
+          It took me about a week to get my website to a satisfactory state.
+        </p>
+        <p>
+          Fun fact: my website used to look like this! I think I've come a long
+          way since fall 2020...
+        </p>
+        <img src="/img/projects/old-design.png" alt="my old website" />
       </Section>
 
       <Section name="inspiration">
@@ -93,7 +102,7 @@ export default function PersonalWebsite() {
             <li>How to create re-usable components.</li>
             <li>More advanced and efficient DOM navigation.</li>
             <li>How to factor out code redundancy on a larger scale.</li>
-            <li>UX design in terms of navigation and priorities.</li>
+            <li>What to consider when doing UX design from scratch.</li>
             <li>CSS animation.</li>
             <li>Fun JavaScript tricks I didn't get to learn in class.</li>
           </ul>

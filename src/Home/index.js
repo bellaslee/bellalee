@@ -13,12 +13,6 @@ const projects = [
     title: 'personal website',
     text: 'the second iteration of my website.',
     route: '/projects/personal-website'
-  },
-  {
-    image: 'projects/with-friends.jpg',
-    title: 'with friends',
-    text: 'my Design 166 project.',
-    route: '/projects/with-friends'
   }
 ];
 

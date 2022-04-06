@@ -7,8 +7,8 @@ import {
 import React from 'react';
 import Home from './Home';
 import About from './About';
+import Resume from './Resume';
 import Article from './Components/Article';
-import WithFriends from './routes/WithFriends';
 import PersonalWebsite from './routes/PersonalWebsite';
 import Thoma from './routes/Thoma';
 import Aki from './routes/Aki';
@@ -23,8 +23,8 @@ render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/resume" element={<Resume />} />
       <Route path="/projects" element={<Article />}>
-        <Route path="/projects/with-friends" element={<WithFriends />} />
         <Route path="/projects/personal-website" element={<PersonalWebsite />} />
       </Route>
       <Route path="/illustrations" element={<Article />}>

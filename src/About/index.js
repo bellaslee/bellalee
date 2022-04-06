@@ -1,5 +1,5 @@
 import '../assets/css/about.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
