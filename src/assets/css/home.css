@@ -135,6 +135,7 @@ h3 {
   animation: fadeInExpand 1s;
 }
 .section--active h2,
+.section--active h3,
 .section--active p,
 .section--active ul {
   animation: fadeInUp 1s;

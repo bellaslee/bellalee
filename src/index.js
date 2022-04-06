@@ -13,6 +13,8 @@ import PersonalWebsite from './routes/PersonalWebsite';
 import Thoma from './routes/Thoma';
 import Aki from './routes/Aki';
 import Yuta from './routes/Yuta';
+import ChildeDelusion from './routes/ChildeDelusion';
+import ChildeSnow from './routes/ChildeSnow';
 
 const rootElement = document.getElementById('root');
 
@@ -29,8 +31,8 @@ render(
         <Route path="/illustrations/aki" element={<Aki />} />
         <Route path="/illustrations/yuta" element={<Yuta />} />
         <Route path="/illustrations/thoma" element={<Thoma />} />
-        <Route path="/illustrations/childe-delusion" />
-        <Route path="/illustrations/childe-snow" />
+        <Route path="/illustrations/childe-delusion" element={<ChildeDelusion />} />
+        <Route path="/illustrations/childe-snow" element={<ChildeSnow />} />
       </Route>
     </Routes>
   </BrowserRouter>,

@@ -135,6 +135,7 @@ h3 {
   animation: fadeInExpand 1s;
 }
 .section--active h2,
+.section--active h3,
 .section--active p,
 .section--active ul {
   animation: fadeInUp 1s;
@@ -208,7 +209,10 @@ a:visited {
 .illust h3,
 .illust p {
   margin: 12px;
-  max-width: 30vw;
+}
+.project p,
+.illust p {
+  max-width: 48vw;
 }
 .project img,
 .illust img {
@@ -220,6 +224,14 @@ a:visited {
 
 .project .container {
   flex-direction: column;
+}
+.project .process h2,
+.project .process h3,
+.project .inspiration h2,
+.project .inspiration h3,
+.project .learning-outcomes h2,
+.project .learning-outcomes h3 {
+  align-self: flex-start;
 }
 
 .illust .process .container {

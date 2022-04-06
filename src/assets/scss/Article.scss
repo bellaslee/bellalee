@@ -11,7 +11,10 @@ $accent-color: #912921;
   h3,
   p {
     margin: 12px;
-    max-width: 30vw;
+  }
+
+  p {
+    max-width: 48vw;
   }
 
   img {
@@ -25,6 +28,15 @@ $accent-color: #912921;
 .project {
   .container {
     flex-direction: column;
+  }
+
+  .process,
+  .inspiration,
+  .learning-outcomes {
+    h2,
+    h3 {
+      align-self: flex-start;
+    }
   }
 }
 
