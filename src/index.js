@@ -1,6 +1,7 @@
 import { render } from 'react-dom';
 import {
   BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from 'react-router-dom';
@@ -19,7 +20,7 @@ import ChildeSnow from './routes/ChildeSnow';
 const rootElement = document.getElementById('root');
 
 render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -35,6 +36,6 @@ render(
         <Route path="/illustrations/childe-snow" element={<ChildeSnow />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   rootElement
 );
