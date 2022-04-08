@@ -51,3 +51,29 @@ $accent-color: #912921;
     margin-top: 12px;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .resume {
+    .experience {
+      .container {
+        align-items: center;
+      }
+    }
+
+    .intro,
+    .profile,
+    .skills,
+    .experience,
+    .education {
+      .container {
+        flex-direction: column;
+        width: 75%;
+
+        .content {
+          margin-left: 0px;
+          width: 75vw !important;
+        }
+      }
+    }
+  }
+}

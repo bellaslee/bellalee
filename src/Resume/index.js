@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
+import Spacer from '../Components/Spacer';
 
 function Resume() {
   useEffect(() => {
@@ -25,7 +26,7 @@ function Resume() {
         <h1>Bella Lee</h1>
         <h3>first-year student at the University of Washington seeking opportunities in front-end or full-stack web development.</h3>
       </Section>
-
+      <Spacer />
       <Section name="profile">
         <h2>Profile.</h2>
         <div className="content">
@@ -37,7 +38,7 @@ function Resume() {
           </ul>
         </div>
       </Section>
-
+      <Spacer />
       <Section name="skills">
         <h2>Skills.</h2>
         <div className="content">
@@ -50,7 +51,7 @@ function Resume() {
           </ul>
         </div>
       </Section>
-
+      <Spacer />
       <Section name="experience">
         <h2>Experience.</h2>
         <div className="content">
@@ -143,7 +144,7 @@ function Resume() {
           </div>
         </div>
       </Section>
-
+      <Spacer />
       <Section name="education">
         <h2>Education.</h2>
         <div className="content">

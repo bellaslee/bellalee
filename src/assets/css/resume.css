@@ -84,6 +84,14 @@
     transform: translate(0, 0px);
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*
   General styling for website.
 */
@@ -239,6 +247,28 @@ a:visited {
 }
 .resume li {
   margin-top: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .resume .experience .container {
+    align-items: center;
+  }
+  .resume .intro .container,
+.resume .profile .container,
+.resume .skills .container,
+.resume .experience .container,
+.resume .education .container {
+    flex-direction: column;
+    width: 75%;
+  }
+  .resume .intro .container .content,
+.resume .profile .container .content,
+.resume .skills .container .content,
+.resume .experience .container .content,
+.resume .education .container .content {
+    margin-left: 0px;
+    width: 75vw !important;
+  }
 }
 
 /*# sourceMappingURL=resume.css.map */
