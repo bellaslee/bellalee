@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Nav from './Nav';
 import BackButton from './BackButton';
 import { Outlet } from 'react-router-dom';
+import ScrollIndicator from './ScrollIndicator';
 
 function Article() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function Article() {
       <Outlet />
       <Nav currentPage="Article" />
       <BackButton />
+      <ScrollIndicator />
     </React.Fragment>
   );
 }
