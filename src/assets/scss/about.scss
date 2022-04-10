@@ -1,6 +1,10 @@
 @use 'base';
 
 .intro {
+  .container {
+    flex-direction: column;
+  }
+  
   h2 {
     margin-bottom: 0;
   }

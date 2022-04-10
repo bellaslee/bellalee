@@ -15,6 +15,7 @@ import Aki from './routes/Aki';
 import Yuta from './routes/Yuta';
 import ChildeDelusion from './routes/ChildeDelusion';
 import ChildeSnow from './routes/ChildeSnow';
+import Jojo from './routes/Jojo';
 
 const rootElement = document.getElementById('root');
 
@@ -33,6 +34,7 @@ render(
         <Route path="/illustrations/thoma" element={<Thoma />} />
         <Route path="/illustrations/childe-delusion" element={<ChildeDelusion />} />
         <Route path="/illustrations/childe-snow" element={<ChildeSnow />} />
+        <Route path="/illustrations/jojo" element={<Jojo />} />
       </Route>
     </Routes>
   </HashRouter>,

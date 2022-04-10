@@ -10,7 +10,7 @@ export default function Yuta() {
         />
         <div className="info">
           <h2>Yuta</h2>
-          <h3>Jujutsu Kaisen 0 Fanart. March 2022.</h3>
+          <h3>Jujutsu Kaisen 0 fanart. March 2022.</h3>
           <p>Time taken: 10 hr</p>
           <p>Program: Clip Studio Paint</p>
         </div>

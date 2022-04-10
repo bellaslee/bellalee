@@ -4,7 +4,6 @@ import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Carousel from '../Components/Carousel';
-import AboutBlurb from '../Components/AboutBlurb';
 
 const hobbyImgs = [
   {
@@ -39,6 +38,11 @@ const illustrations = [
     image: 'illustrations/yuta.png',
     text: 'Jujutsu Kaisen 0 fanart. March 2022.',
     route: '/illustrations/yuta'
+  },
+  {
+    image: 'illustrations/jojoo.jpg',
+    text: 'Jojo\'s Bizarre Adventure fanart. April 2022.',
+    route: '/illustrations/jojoo.jpg'
   },
   {
     image: 'illustrations/aki.jpg',
@@ -93,27 +97,8 @@ function About() {
   return (
     <React.Fragment>
       <Section name="intro">
-        <img src='./img/assets/starburst.png' alt="" className="intro__image" />
-        <div className="content intro__content">
-          <AboutBlurb />
-        </div>
-      </Section>
-
-      <Section name="blurb">
-        <div className="content blurb__content">
-          <h2>Redefining home.</h2>
-          <p>San Diego, Fremont, Hsinchu, Taichung, Kaohsiung, Seattle.</p>
-          <p>
-            A big move has marked the beginning of every new chapter of my life, from childhood to adulthood, foolishness to maturity. Though I was able to experience various cultures, ideas, and people, I never really had a place I considered “home”.
-          </p>
-          <p>
-            With the turn of each page, I lamented my lack of a reliable anchor point. I desired a place to call my hometown, to grow up with childhood friends with shared memories and secrets.
-          </p>
-          <p>
-            One night, as I looked around me and saw the faces of my smiling friends, I had an epiphany. “Home” did not have to be a defined area; that definition is merely a suggestion, merely a construct. Stories shared over barbecue on a Friday night. Singing our favorite songs as we stroll around the art museum. Laughing so hard that we’re sure six-pack abs will appear the next morning. Home. I’ve found home in the areas where our varied worlds with different backgrounds, ideas, and perspectives overlap, where they come together to lay the foundation for our shared memories and experiences. My new realization of home has made me proud of my identity, cherish those I have around me, and able to find solace no matter where my story takes place.
-          </p>
-        </div>
-        <img src="./img/assets/anchor.png" alt="" className="blurb__image" />
+        <h2>Hi, I'm Bella!</h2>
+        <h3>Scroll to read more about me.</h3>
       </Section>
 
       <Section name="hobby">
@@ -128,7 +113,7 @@ function About() {
       <Section name="illustrations">
         <h2>I'm a big fan of pretty fictional characters.</h2>
         <p>
-          You can find more of my illustrations <a href="http://instagram.com/peachyxin" target="_blank" rel="noreferrer"> @peachyxin</a> on Instagram!
+          You can find more of my illustrations <a href="http://instagram.com/peachyxin" target="_blank" rel="noreferrer"> @peachyxin</a> on Instagram! If you're interested in commissioning me, you can find more information on my <a href="http://peachyxin.com/commissions" target="_blank" rel="noreferrer">portfolio</a>.
         </p>
         <Carousel items={illustrations} />
       </Section>

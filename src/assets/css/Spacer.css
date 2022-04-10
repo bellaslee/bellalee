@@ -223,7 +223,7 @@ a:visited {
   display: block;
 }
 .spacer--active {
-  animation: spin 1s ease infinite;
+  animation: spin 1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -3s);
 }

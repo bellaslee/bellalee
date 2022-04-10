@@ -10,7 +10,7 @@ export default function Aki() {
         />
         <div className="info">
           <h2>Aki</h2>
-          <h3>Chainsaw Man Fanart. April 2022.</h3>
+          <h3>Chainsaw Man fanart. April 2022.</h3>
           <p>Time taken: 12 hr</p>
           <p>Program: Clip Studio Paint</p>
         </div>

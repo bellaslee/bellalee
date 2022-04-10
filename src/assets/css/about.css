@@ -214,6 +214,9 @@ a:visited {
     width: 75% !important;
   }
 }
+.intro .container {
+  flex-direction: column;
+}
 .intro h2 {
   margin-bottom: 0;
 }
