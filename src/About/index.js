@@ -42,7 +42,7 @@ const illustrations = [
   {
     image: 'illustrations/jojoo.jpg',
     text: 'Jojo\'s Bizarre Adventure fanart. April 2022.',
-    route: '/illustrations/jojoo.jpg'
+    route: '/illustrations/jojo'
   },
   {
     image: 'illustrations/aki.jpg',
