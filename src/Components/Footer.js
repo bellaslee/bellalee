@@ -3,7 +3,7 @@ import Section from './Section';
 
 const links = [
   {
-    page: 'bellalee.com',
+    page: 'bella@bellalee.com',
     url: '',
   },
   {
