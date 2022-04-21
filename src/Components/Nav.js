@@ -14,6 +14,10 @@ const links = [
   {
     page: "Resume",
     url: "../resume"
+  },
+  {
+    page: "Portfolio",
+    url: "../portfolio"
   }
 ]
 

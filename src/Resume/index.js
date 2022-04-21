@@ -24,7 +24,7 @@ function Resume() {
     <div className="resume">
       <Section name="intro">
         <h1>Bella Lee</h1>
-        <h3>first-year student at the University of Washington seeking opportunities in front-end or full-stack web development.</h3>
+        <h3>freelance illustrator and designer seeking to expand to front-end or full-stack web development.</h3>
       </Section>
       <Spacer />
       <Section name="profile">
