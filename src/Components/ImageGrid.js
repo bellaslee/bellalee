@@ -1,3 +1,4 @@
+import '../assets/css/ImageGrid.css';
 import React from 'react';
 import ImageCard from './ImageCard';
 
@@ -12,9 +13,9 @@ function ImageGrid({ items }) {
     );
   });
 
-
   return (
     <div className="image-grid">
+      {renderItems}
     </div>
   );
 }

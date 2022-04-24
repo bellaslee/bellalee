@@ -8,6 +8,7 @@
   margin-top: 48px;
   margin-bottom: 48px;
   display: block;
+  border: none !important;
 
   &--active {
     animation: spin 1s linear infinite;

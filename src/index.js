@@ -17,6 +17,7 @@ import ChildeDelusion from './routes/ChildeDelusion';
 import ChildeSnow from './routes/ChildeSnow';
 import Jojo from './routes/Jojo';
 import Portfolio from './Portfolio';
+import Ostomate from './routes/Ostomate';
 
 const rootElement = document.getElementById('root');
 
@@ -28,6 +29,7 @@ render(
       <Route path="/resume" element={<Resume />} />
       <Route path="/projects" element={<Article />}>
         <Route path="/projects/personal-website" element={<PersonalWebsite />} />
+        <Route path="/projects/ostomate" element={<Ostomate />} />
       </Route>
       <Route path="/illustrations" element={<Article />}>
         <Route path="/illustrations/aki" element={<Aki />} />

@@ -1,4 +1,5 @@
 import Section from '../Components/Section';
+import Spacer from '../Components/Spacer';
 
 export default function PersonalWebsite() {
   return (
@@ -63,7 +64,7 @@ export default function PersonalWebsite() {
         </p>
         <img src="/img/projects/old-design.png" alt="my old website" />
       </Section>
-
+      <Spacer />
       <Section name="inspiration">
         <h2>More inspiration.</h2>
         <h3>
@@ -93,6 +94,7 @@ export default function PersonalWebsite() {
           by his work. Maybe some day it will look as nice as his!
         </p>
       </Section>
+      <Spacer />
       <Section name="learning-outcomes">
         <h2>Learning outcomes.</h2>
         <p>

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ImageCard({ item }) {
   const [spans, setSpans] = useState(0);
@@ -14,11 +15,9 @@ function ImageCard({ item }) {
     setSpans(spans);
   }
 
-  const { description, urls } = 'cool'; // what is this lol
-
   return (
     <div style={{ gridRowEnd: `span ${spans}` }}>
-      <img ref={imageRef} alt={description} src={urls.regular} />
+      <Link to={item.route}><img ref={imageRef} alt={item.text} src={`../img/${item.image}`} /></Link>
     </div>
   )
 }

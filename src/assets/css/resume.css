@@ -234,6 +234,9 @@ a:visited {
 .resume .content .job-title {
   margin: 0px;
 }
+.resume .experience h2 {
+  margin-bottom: 0;
+}
 .resume .experience .container {
   align-items: flex-start;
 }
