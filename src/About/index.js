@@ -4,6 +4,7 @@ import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Carousel from '../Components/Carousel';
+import ScrollIndicator from '../Components/ScrollIndicator';
 
 const hobbyImgs = [
   {
@@ -98,7 +99,7 @@ function About() {
     <React.Fragment>
       <Section name="intro">
         <h2>Hi, I'm Bella!</h2>
-        <h3>Scroll to read more about me.</h3>
+        <ScrollIndicator position="100" />
       </Section>
 
       <Section name="hobby">
@@ -113,7 +114,7 @@ function About() {
       <Section name="illustrations">
         <h2>I'm a big fan of pretty fictional characters.</h2>
         <p>
-          You can find more of my illustrations <a href="http://instagram.com/peachyxin" target="_blank" rel="noreferrer"> @peachyxin</a> on Instagram! If you're interested in commissioning me, you can find more information on my <a href="http://peachyxin.com/commissions" target="_blank" rel="noreferrer">portfolio</a>.
+          If you're interested in commissioning me, you can find more information <a href="http://peachyxin.com/commissions" target="_blank" rel="noreferrer">here</a>.
         </p>
         <Carousel items={illustrations} />
       </Section>

@@ -28,21 +28,24 @@
   border-radius: 3%;
   border: solid 1px #817676;
 }
-.carousel .button {
+.carousel .scroll-button {
   z-index: 2;
   transition: 0.3s;
   position: absolute;
   opacity: 0.75;
 }
-.carousel .button:hover {
+.carousel .scroll-button:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-.carousel .button__left {
+.carousel .scroll-button__left {
   left: 12px;
 }
-.carousel .button__right {
+.carousel .scroll-button__right {
   right: 12px;
+}
+.carousel .scroll-button--hidden {
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 1200px) {

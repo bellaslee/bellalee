@@ -1,5 +1,5 @@
 import '../assets/css/portfolio.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../Components/Nav';
 import Section from '../Components/Section';
 import Carousel from '../Components/Carousel';
@@ -55,14 +55,28 @@ const projects = [
 ];
 
 function Portfolio() {
+  useEffect(() => {
+    const getScroll = () => {
+      document.body.style.setProperty('--scroll',
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }
+
+    window.addEventListener('scroll', getScroll, false);
+    window.scrollTo(0, 0);
+
+    return () => {
+      window.removeEventListener('scroll', getScroll)
+    }
+  }, []);
+
   return (
     <React.Fragment>
       <Section name="projects">
-        <h2>Projects</h2>
+        <h2>My projects.</h2>
         <Carousel items={projects} />
       </Section>
-      <Section name="illustrations">
-        <h2>Illustrations</h2>
+      <Section name="illustrations-grid">
+        <h2>My illustrations.</h2>
         <ImageGrid items={illustrations} />
       </Section>
       <Nav currentPage="Portfolio" />

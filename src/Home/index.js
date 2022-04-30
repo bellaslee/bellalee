@@ -5,6 +5,7 @@ import Nav from '../Components/Nav';
 import Section from '../Components/Section';
 import Carousel from '../Components/Carousel';
 import AboutBlurb from '../Components/AboutBlurb';
+import Button from '../Components/Button';
 
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];
 const projects = [
@@ -13,6 +14,12 @@ const projects = [
     title: 'personal website',
     text: 'the second iteration of my website.',
     route: '/projects/personal-website'
+  },
+  {
+    image: 'projects/ostomate.png',
+    title: 'Osto-Mate',
+    text: 'branding and promotional materials for the Dempsey Startup Competition.',
+    route: '../projects/ostomate'
   }
 ];
 

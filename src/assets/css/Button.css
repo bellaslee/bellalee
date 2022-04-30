@@ -1,0 +1,18 @@
+.button {
+  border: #817676 1px solid;
+  background-color: #dcd7ce;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+.button a {
+  text-decoration: none;
+  color: inherit;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Button.css.map */

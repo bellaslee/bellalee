@@ -36,7 +36,7 @@ function Carousel({ items }) {
     <div className="carousel">
       <img
         onClick={() => onMove('left')}
-        className="button button__left"
+        className={`scroll-button scroll-button__left ${totalWidth > window.innerWidth ? '' : 'scroll-button--hidden'}`}
         src="img/assets/button-left.png"
         alt="left button"
       />
@@ -45,7 +45,7 @@ function Carousel({ items }) {
       </div>
       <img
         onClick={() => onMove('right')}
-        className="button button__right"
+        className={`scroll-button scroll-button__right ${totalWidth > window.innerWidth ? '' : 'scroll-button--hidden'}`}
         src="img/assets/button-right.png"
         alt="right button"
       />

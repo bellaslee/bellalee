@@ -15,10 +15,10 @@ const links = [
     page: "Resume",
     url: "../resume"
   },
-  {
-    page: "Portfolio",
-    url: "../portfolio"
-  }
+  // {
+  //   page: "Portfolio",
+  //   url: "../portfolio"
+  // }
 ]
 
 function Nav({ currentPage }) {

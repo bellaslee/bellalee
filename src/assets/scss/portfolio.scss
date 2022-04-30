@@ -1,1 +1,11 @@
 @use 'base';
+
+.illustrations-grid {
+  .container {
+    flex-direction: column;
+  }
+
+  h2 {
+    align-self: flex-start;
+  }
+}

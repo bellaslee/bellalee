@@ -25,7 +25,7 @@ function Resume() {
     <div className="resume">
       <Section name="intro">
         <h1>Bella Lee</h1>
-        <h3>freelance illustrator and designer seeking opportunities in front-end web development.</h3>
+        <h3>illustrator and designer seeking opportunities in front-end web development.</h3>
       </Section>
       <Spacer />
       <Section name="profile">
@@ -56,7 +56,7 @@ function Resume() {
       <Section name="experience">
         <div>
           <h2>Experience.</h2>
-          <p>To see my work, head over to my <Link to="../portfolio">portfolio</Link>!</p>
+          {/* <p>To see my work, head over to my <Link to="../portfolio">portfolio</Link>!</p> */}
         </div>
         <div className="content">
           <div className="experience__job">
@@ -101,29 +101,6 @@ function Resume() {
               <li>Produce custom full-color digital illustrations for independent clients. Handle customer service via email and online chatting platforms.</li>
               <li>Managed social media presence on Twitter and Instagram.</li>
               <li>Designed, sourced, ordered, and marketed merchandise, making 39 sales in a 3 month period in 2018.</li>
-            </ul>
-          </div>
-
-          <div className="experience__job">
-            <h3>World Scholar's Cup</h3>
-            <p className="job-title">Club Vice President</p>
-            <p className="time">August 2019 — May 2021</p>
-            <ul>
-              <li>Instructed both middle and high school in writing and debate.</li>
-              <li>Handled financial planning for cross-country trip to a competition site.</li>
-              <li>Gold medalist in multiple areas, including 1st place in team writing in March 2021, as well as school top scholar in 2019.</li>
-            </ul>
-          </div>
-
-          <div className="experience__job">
-            <h3>Cadenza</h3>
-            <p className="job-title">Club President</p>
-            <p className="time">August 2019 — May 2021</p>
-            <ul>
-              <li>Led weekly meetings and planned 4 performances each schoolyear.</li>
-              <li>Managed documents adn files for auditions and performance quality checks.</li>
-              <li>Coordinated event logistics with school IT office. Helped set up and test technology before events at the venue.</li>
-              <li>Recorded and edited covers of popular songs using Logic Pro X. Managed social media presence on Instagram and YouTube.</li>
             </ul>
           </div>
 
