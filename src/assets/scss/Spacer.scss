@@ -3,11 +3,11 @@
 
 .spacer {
   width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 48px;
-  margin-bottom: 48px;
-  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 48px !important;
+  margin-bottom: 48px !important;
+  display: block !important;
   border: none !important;
 
   &--active {

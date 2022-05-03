@@ -249,6 +249,8 @@ a:visited {
 }
 .project img {
   max-width: 50vw;
+  max-height: 90vh;
+  margin: 12px;
 }
 .project .process h2,
 .project .process h3,

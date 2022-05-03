@@ -114,7 +114,7 @@ function About() {
       <Section name="illustrations">
         <h2>I'm a big fan of pretty fictional characters.</h2>
         <p>
-          If you're interested in commissioning me, you can find more information <a href="http://peachyxin.com/commissions" target="_blank" rel="noreferrer">here</a>.
+          If you're interested in commissioning an illustration, you can find more information <a href="http://peachyxin.com/commissions" target="_blank" rel="noreferrer">here</a>.
         </p>
         <Carousel items={illustrations} />
       </Section>

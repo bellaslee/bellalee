@@ -6,16 +6,17 @@ export default function AboutBlurb() {
       <h2>Hi! I'm Bella.</h2>
       <p>
         I am a first-year student at the University of Washington intending on
-        majoring in Informatics. I started out 100% sure I wanted to be a
-        graphic designer, but I unexpectedly fell in love with web programming
-        instead. Now, I strive to bridge the worlds between visual communication
-        and technology. If I’m able to make even one person’s life easier or
-        more enjoyable through my creations, then I can be satisfied.
+        majoring in Visual Communication Design and Informatics. I started out
+        100% sure I wanted to be a graphic designer, but I unexpectedly fell in
+        love with web programming, too. Now, my dream is to work in the
+        intersection between visual design and technology. If I’m able to make
+        even one person’s more delightful through my creations, then I can be
+        satisfied.
       </p>
       <p>
-        I’m currently working on UX Design, Back-End Development, and Web
-        Development for the Stoma Project in the Sensors, Energy, and Automation
-        Laboratory, as well as Graphic Design for @smirk_uw on Instagram.
+        I am the Chief Design Officer for Smirk UW and am currently working on
+        Design and Web Development for the Stoma Project in the Sensors, Energy,
+        and Automation Laboratory.
       </p>
       <p>
         In my own time, I like to create illustrations of my favorite
