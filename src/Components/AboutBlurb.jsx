@@ -23,9 +23,10 @@ export default function AboutBlurb() {
       <p>
         In my own time, I like to create illustrations of my favorite
         characters, play fingerstyle guitar, and get engrossed in my latest
-        interest (right now, I want to learn p5.js). If I’m not on campus, you
-        can most likely find me at my favorite restaurant, Meesum Pastry,
-        indulging in the nostalgic and comforting taste of Taiwanese cuisine.
+        interest &#40;right now, I want to learn p5.js&#41;. If I’m not on
+        campus, you can most likely find me at my favorite restaurant, Meesum
+        Pastry, indulging in the nostalgic and comforting taste of Taiwanese
+        cuisine.
       </p>
     </React.Fragment>
   );
