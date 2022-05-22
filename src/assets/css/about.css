@@ -109,6 +109,10 @@ body {
   margin: 0px;
 }
 
+a {
+  color: #912921;
+}
+
 h1,
 h2,
 h3,
@@ -158,13 +162,6 @@ h3 {
   max-height: fit-content;
   position: relative;
   overflow: hidden;
-}
-
-a {
-  color: #912921;
-}
-a:visited {
-  color: inherit;
 }
 
 .footer .link-list,

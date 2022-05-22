@@ -24,6 +24,10 @@ body {
   margin: 0px;
 }
 
+a {
+  color: $accent-color;
+}
+
 h1,
 h2,
 h3,
@@ -81,14 +85,6 @@ h3 {
 
 .container {
   @extend %flex;
-}
-
-a {
-  color: $accent-color;
-
-  &:visited {
-    color: inherit;
-  }
 }
 
 .footer,
