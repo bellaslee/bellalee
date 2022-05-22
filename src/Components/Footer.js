@@ -6,11 +6,11 @@ const links = [
     page: 'bella@bellalee.com',
     url: '',
   },
-  {
-    page: 'Commissions',
-    url: 'https://www.peachyxin.com/commissions',
-    new_tab: true
-  },
+  // {
+  //   page: 'Commissions',
+  //   url: 'https://www.peachyxin.com/commissions',
+  //   new_tab: true
+  // },
   {
     page: 'Linkedin',
     url: 'https://www.linkedin.com/in/bellasylee/',
