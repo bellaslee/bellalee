@@ -1,4 +1,3 @@
-@use 'base';
 @use 'animations';
 
 $primary-color: #dcd7ce;
@@ -7,10 +6,9 @@ $tertiary-color: #817676;
 $accent-color: #912921;
 
 .scroll-indicator {
-  position: absolute;
-  bottom: -18px;
-  left: 50%;
-  margin-bottom: 0px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   animation: floatDown 2s infinite ease-in-out;
   transition: 1s;
 

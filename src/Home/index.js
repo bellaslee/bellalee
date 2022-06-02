@@ -18,7 +18,7 @@ const projects = [
   {
     image: 'projects/ostomate.png',
     title: 'Osto-Mate',
-    text: 'branding and promotional materials for the Dempsey Startup Competition.',
+    text: 'branding and promotional materials for the Dempsey Startup Competition at UW.',
     route: '../projects/ostomate'
   }
 ];

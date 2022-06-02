@@ -1,4 +1,5 @@
 import Section from '../Components/Section';
+import ScrollIndicator from '../Components/ScrollIndicator';
 
 export default function Yuta() {
   return (
@@ -14,6 +15,7 @@ export default function Yuta() {
           <p>Time taken: 10 hr</p>
           <p>Program: Clip Studio Paint</p>
         </div>
+        <ScrollIndicator />
       </Section>
 
       <Section name="process">

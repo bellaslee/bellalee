@@ -1,5 +1,6 @@
 import Section from '../Components/Section';
 import Spacer from '../Components/Spacer';
+import ScrollIndicator from '../Components/ScrollIndicator';
 
 export default function Ostomate() {
   return (
@@ -10,8 +11,8 @@ export default function Ostomate() {
           branding and promotional materials for the Dempsey Startup Competition
           at UW.
         </h3>
+        <ScrollIndicator />
       </Section>
-
       <Section name="process">
         <h2>The process.</h2>
         <p>
@@ -52,6 +53,27 @@ export default function Ostomate() {
         </p>
       </Section>
       <Spacer />
+      <Section>
+        <h2>The outcome.</h2>
+        <img src="img/projects/team-photo.png" alt="Osto-Mate team" />
+        <p>
+          Osto-Mate was able to advance to the Sweet Sixteen Semi-Final Round
+          for the competition. I helped finalize the design for the pitch deck
+          and, after hours of discussion and memorization, we finally pitched to
+          a panel of seven judges on May 26th, 2022. Unfortunately, we did not
+          make it to the top four, but we did win the $2,500 Karr Tuttle
+          Campbell Best Health and Wellness Impact Idea Prize.{' '}
+          <a
+            href="https://blog.foster.uw.edu/2022-awards-dempsey-startup-competition/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read more about the competition results here
+          </a>
+          !
+        </p>
+      </Section>
+      <Spacer />
       <Section name="learning-outcomes">
         <h2>Learning outcomes.</h2>
         <p>
@@ -67,6 +89,7 @@ export default function Ostomate() {
               than) images. I had previously only worked with designs with
               minimal text.
             </li>
+            <li>Public speaking and presentation-making.</li>
           </ul>
           I hope to have the chance to work with more information-focused design
           in the future, too, as this was a really interesting challenge for me

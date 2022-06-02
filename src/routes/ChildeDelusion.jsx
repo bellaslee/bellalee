@@ -1,3 +1,4 @@
+import ScrollIndicator from '../Components/ScrollIndicator';
 import Section from '../Components/Section';
 
 export default function ChildeDelusion() {
@@ -14,6 +15,7 @@ export default function ChildeDelusion() {
           <p>Time taken: 8 hr</p>
           <p>Program: Clip Studio Paint</p>
         </div>
+        <ScrollIndicator />
       </Section>
 
       <Section name="process">

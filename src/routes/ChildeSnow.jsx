@@ -1,4 +1,5 @@
 import Section from '../Components/Section';
+import ScrollIndicator from '../Components/ScrollIndicator';
 
 export default function ChildeSnow() {
   return (
@@ -14,6 +15,7 @@ export default function ChildeSnow() {
           <p>Time taken: 8 hr</p>
           <p>Program: Clip Studio Paint</p>
         </div>
+        <ScrollIndicator />
       </Section>
 
       <Section name="process">

@@ -1,5 +1,6 @@
 import Section from '../Components/Section';
 import Spacer from '../Components/Spacer';
+import ScrollIndicator from '../Components/ScrollIndicator';
 
 export default function PersonalWebsite() {
   return (
@@ -8,6 +9,7 @@ export default function PersonalWebsite() {
         <img src="/img/projects/website.png" alt="my website" />
         <h1>Personal Website</h1>
         <h3>the website you are looking at right now!</h3>
+        <ScrollIndicator />
       </Section>
 
       <Section name="process">
