@@ -6,7 +6,7 @@ export default function AboutBlurb() {
       <h2>Hi! I'm Bella.</h2>
       <p>
         I am a first-year student at the University of Washington intending on
-        majoring in Visual Communication Design and Informatics. My dream is to
+        majoring in Informatics. My dream is to
         work in the intersection between visual communication and technology;
         lately, I've become very interested in creative coding. I hope to make
         information more accessible, intuitive, and enjoyable to consume through
