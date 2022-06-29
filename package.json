@@ -3,24 +3,26 @@
   "version": "2.0.9",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "express": "^4.17.3",
     "material-icons": "^1.10.8",
+    "next": "^12.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-horizontal-scrolling-menu": "^2.7.1",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build"
   },
   "eslintConfig": {
     "extends": [

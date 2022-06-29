@@ -1,0 +1,23 @@
+@use 'animations';
+
+$primary-color: #dcd7ce;
+$secondary-color: #483f3f;
+$tertiary-color: #817676;
+$accent-color: #912921;
+
+.scroll-indicator {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  animation: floatDown 2s infinite ease-in-out;
+  transition: 1s;
+
+  svg {
+    color: $accent-color;
+    font-size: 64px;
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+}
