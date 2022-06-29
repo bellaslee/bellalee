@@ -55,7 +55,6 @@ export default function Ostomate() {
       <Spacer />
       <Section>
         <h2>The outcome.</h2>
-        <img src="img/projects/team-photo.png" alt="Osto-Mate team" />
         <p>
           Osto-Mate was able to advance to the Sweet Sixteen Semi-Final Round
           for the competition. I helped finalize the design for the pitch deck

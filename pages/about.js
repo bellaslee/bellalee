@@ -4,6 +4,7 @@ import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Carousel from '../Components/Carousel';
 import ScrollIndicator from '../Components/ScrollIndicator';
+import Head from 'next/head';
 
 const hobbyImgs = [
   {
@@ -95,7 +96,11 @@ function About() {
   }
 
   return (
-    <React.Fragment>
+    <>
+      <Head>
+        <title>about | bella lee</title>
+        <meta property="og:title" content="about | bella lee" key="title" />
+      </Head>
       <Section name="intro">
         <h2>Hi, I'm Bella!</h2>
         <ScrollIndicator position="100" />
@@ -120,7 +125,7 @@ function About() {
 
       <Footer />
       <Nav currentPage="About" />
-    </React.Fragment>
+    </>
   )
 }
 

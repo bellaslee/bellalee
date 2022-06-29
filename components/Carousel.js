@@ -50,7 +50,7 @@ function Carousel({ items }) {
       </div>
       <img
         onClick={() => onMove('right')}
-        className={`scroll-button scroll-button__right ${scroll ? '' : 'scroll-button--hidden'}`}
+        className={`scroll-button scroll-button__right ${scrollButtonStatus ? '' : 'scroll-button--hidden'}`}
         src="img/assets/button-right.png"
         alt="right button"
       />

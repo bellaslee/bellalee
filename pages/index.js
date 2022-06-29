@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import Section from '../components/Section';
 import Carousel from '../components/Carousel';
 import AboutBlurb from '../components/AboutBlurb';
+import Head from 'next/head';
 
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];
 const projects = [
@@ -29,7 +30,6 @@ function Home() {
     }
 
     window.addEventListener('scroll', getScroll, false);
-    window.scrollTo(0, 0);
 
     return () => {
       window.removeEventListener('scroll', getScroll)
@@ -51,7 +51,11 @@ function Home() {
   }
 
   return (
-    <React.Fragment>
+    <>
+      <Head>
+        <title>home | bella lee</title>
+        <meta property="og:title" content="home | bella lee" key="title" />
+      </Head>
       <Section name="header">
         <img src="./img/assets/bee.png" alt="" className="header__image" />
         <div className="content header__content">
@@ -74,7 +78,7 @@ function Home() {
 
       <Footer />
       <Nav currentPage="Home" />
-    </React.Fragment>
+    </>
   );
 }
 

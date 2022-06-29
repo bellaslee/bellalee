@@ -17,7 +17,6 @@ export default function Document() {
         <meta name="description" content="Web site created using create-react-app" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="manifest" href="./manifest.json" />
-        <title>bella lee</title>
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38234744-1"></script>
                 <script>
                   window.dataLayer = window.dataLayer || [];

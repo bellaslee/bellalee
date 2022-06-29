@@ -3,6 +3,7 @@ import Section from '../Components/Section';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
 import Spacer from '../Components/Spacer';
+import Head from 'next/head';
 
 function Resume() {
   useEffect(() => {
@@ -20,6 +21,11 @@ function Resume() {
   }, []);
 
   return (
+    <>
+      <Head>
+        <title>resume | bella lee</title>
+        <meta property="og:title" content="resume | bella lee" key="title" />
+      </Head>
     <div className="resume">
       <Section name="intro">
         <h1>Bella Lee</h1>
@@ -130,6 +136,7 @@ function Resume() {
       <Footer />
       <Nav currentPage="Resume" />
     </div>
+    </>
   )
 }
 

@@ -6,6 +6,7 @@ import ChildeSnow from './ChildeSnow';
 import Jojo from './Jojo';
 import Yuta from './Yuta';
 import Thoma from './Thoma';
+import Head from 'next/head';
 
 export default function Illustration() {
   const router = useRouter();
@@ -21,8 +22,14 @@ export default function Illustration() {
   }
 
   return (
-    <Article>
-      {component()}
-    </Article>
+    <>
+      <Head>
+        <title>illustration | bella lee</title>
+        <meta property="og:title" content="illustration | bella lee" key="title" />
+      </Head>
+      <Article>
+        {component()}
+      </Article>
+    </>
   )
 }
