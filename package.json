@@ -1,6 +1,6 @@
 {
   "name": "bellalee.com",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
