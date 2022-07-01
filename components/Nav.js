@@ -10,10 +10,10 @@ const links = [
     page: "About",
     url: "../about"
   },
-  {
-    page: "Resume",
-    url: "../resume"
-  },
+  // {
+  //   page: "Resume",
+  //   url: "../resume"
+  // },
   // {
   //   page: "Portfolio",
   //   url: "../portfolio"
