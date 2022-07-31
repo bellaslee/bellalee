@@ -45,7 +45,7 @@ function Footer() {
             {renderLinks}
           </ul>
         </div>
-        <img src="./img/assets/touch.png" alt="" className="footer__image" />
+        <img src="../img/assets/touch.png" alt="" className="footer__image" />
       </Section>
       <div className="copyright">
         &copy; 2022 Bella Lee.

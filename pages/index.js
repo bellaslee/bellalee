@@ -12,7 +12,7 @@ const projects = [
     image: 'projects/website.png',
     title: 'personal website',
     text: 'the second iteration of my website.',
-    route: '/projects/personal-website'
+    route: '../projects/personal-website'
   },
   {
     image: 'projects/ostomate.png',
@@ -45,7 +45,7 @@ function Home() {
   function genImages(imgs, className) {
     return imgs.map((img) => {
       return (
-        <img key={img} src={`./img/assets/${img}.png`} alt="" className={`${className} ${className}__${img}`} />
+        <img key={img} src={`../img/assets/${img}.png`} alt="" className={`${className} ${className}__${img}`} />
       )
     })
   }
@@ -57,7 +57,7 @@ function Home() {
         <meta property="og:title" content="home | bella lee" key="title" />
       </Head>
       <Section name="header">
-        <img src="./img/assets/bee.png" alt="" className="header__image" />
+        <img src="../img/assets/bee.png" alt="" className="header__image" />
         <div className="content header__content">
           <h1>Bella Lee</h1>
           <h3>student at the University of Washington</h3>
@@ -71,10 +71,10 @@ function Home() {
         </div>
       </Section>
 
-      <Section name="projects">
+      {/* <Section name="projects">
         <h2>My projects.</h2>
         <Carousel items={projects} />
-      </Section>
+      </Section> */}
 
       <Footer />
       <Nav currentPage="Home" />

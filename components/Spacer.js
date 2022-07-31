@@ -34,7 +34,7 @@ function Spacer() {
 
   return (
     <img
-      src="/img/assets/bee.png"
+      src="../img/assets/bee.png"
       alt="spacer"
       ref={ref}
       className={`spacer ${active ? 'spacer--active' : ''}`}

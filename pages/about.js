@@ -87,7 +87,7 @@ function About() {
       const { image, caption } = img;
       return (
         <span className={`${className}__container ${className}__${image}`}>
-          <img key={image} src={`./img/assets/${image}.png`} alt="" className={`${className}`} />
+          <img key={image} src={`../img/assets/${image}.png`} alt="" className={`${className}`} />
           <p className={`${className}__caption`}>{caption}</p>
         </span>
       )
