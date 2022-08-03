@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import Footer from '../components/Footer';
-import Nav from '../components/Nav';
-import Section from '../components/Section';
-import Carousel from '../components/Carousel';
-import AboutBlurb from '../components/AboutBlurb';
+import Footer from '../components/footer';
+import Nav from '../components/nav';
+import Section from '../components/section';
+import AboutBlurb from '../components/aboutBlurb';
 import Head from 'next/head';
 
 const aboutImgs = ['girl', 'small-stars-left', 'small-stars-right', 'big-star'];

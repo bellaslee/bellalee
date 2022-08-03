@@ -1,17 +1,5 @@
 // import App from 'next/app'
 import '../assets/css/style.css';
-import '../assets/css/home.css';
-import '../assets/css/about.css';
-import '../assets/css/portfolio.css';
-import '../assets/css/resume.css';
-import '../assets/css/Article.css';
-import '../assets/css/Carousel.css';
-import '../assets/css/Footer.css';
-import '../assets/css/ImageGrid.css';
-import '../assets/css/Spacer.css';
-import '../assets/css/ScrollIndicator.css';
-import '../assets/css/Nav.css';
-import '../assets/css/BackButton.css';
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CarouselItem from './Carouseltem';
+import CarouselItem from './carouselItem';
 
 function Carousel({ items }) {
   const [totalWidth, setTotalWidth] = useState(0);

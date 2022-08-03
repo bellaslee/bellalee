@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import Section from '../Components/Section';
-import Footer from '../Components/Footer';
-import Nav from '../Components/Nav';
-import Carousel from '../Components/Carousel';
-import ScrollIndicator from '../Components/ScrollIndicator';
+import Section from '../components/section';
+import Footer from '../components/footer';
+import Nav from '../components/nav';
+import ScrollIndicator from '../components/scrollIndicator';
 import Head from 'next/head';
+import Gallery from '../components/gallery';
 
 const hobbyImgs = [
   {
@@ -119,7 +119,7 @@ function About() {
         <p>
           If you're interested in commissioning an illustration, you can find more information <a href="http://peachyxin.com/commissions" target="_blank" rel="noreferrer">here</a>.
         </p>
-        <Carousel items={illustrations} />
+        <Gallery />
       </Section>
 
       <Footer />

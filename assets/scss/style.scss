@@ -1,8 +1,22 @@
 /*
-  General styling for website.
+  Global styling for website.
 */
 
 @use 'animations';
+@use 'about';
+@use 'article';
+@use 'backButton';
+@use 'button';
+@use 'carousel';
+@use 'footer';
+@use 'home';
+@use 'imageGrid';
+@use 'nav';
+@use 'portfolio';
+@use 'resume';
+@use 'scrollIndicator';
+@use 'spacer';
+@use 'gallery';
 
 $font-stack: 'Barlow', sans-serif;
 $primary-color: #dcd7ce;

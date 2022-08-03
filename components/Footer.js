@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from './section';
 
 const links = [
   {

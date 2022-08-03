@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import Nav from './Nav';
-import BackButton from './BackButton';
+import Nav from './nav';
+import BackButton from './backbutton';
 
 function Article({ children }) {
   useEffect(() => {

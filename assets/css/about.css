@@ -100,7 +100,7 @@
   margin-left: 24px;
   margin-bottom: 0px;
 }
-.illustrations p {
+.illustrations .container > p {
   align-self: flex-start;
   margin-left: 24px;
 }
