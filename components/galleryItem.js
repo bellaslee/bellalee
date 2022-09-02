@@ -52,12 +52,12 @@ export default function GalleryItem({ margin, title, description, overlay, src, 
 
   function showPopup() {
     popupRef.current.style.display = 'block';
-    document.body.classList.add('stop-scrolling')
+    document.body.classList.add('stop-scrolling');
   }
 
   function hidePopup() {
     popupRef.current.style.display = 'none';
-    document.body.classList.remove('stop-scrolling')
+    document.body.classList.remove('stop-scrolling');
   }
 
   let popupMarginLeft = `-${displayWidth / 2}px`;
@@ -80,7 +80,7 @@ export default function GalleryItem({ margin, title, description, overlay, src, 
           objectFit="cover"
           alt={key}
           loader={imageLoader}
-        />
+          priority={true} />
       </div>
       <div
         className="gallery-item"
@@ -95,7 +95,8 @@ export default function GalleryItem({ margin, title, description, overlay, src, 
           height={height}
           objectFit="cover"
           alt={key}
-          loader={imageLoader} />
+          loader={imageLoader}
+          priority={true} />
       </div>
     </>
   )

@@ -29,39 +29,6 @@ const hobbyImgs = [
   }
 ];
 
-const illustrations = [
-  {
-    image: 'illustrations/thoma.jpg',
-    text: 'Genshin Impact fanart. September 2021.',
-    // route: '../illustrations/thoma'
-  },
-  {
-    image: 'illustrations/yuta.png',
-    text: 'Jujutsu Kaisen 0 fanart. March 2022.',
-    // route: '../illustrations/yuta'
-  },
-  {
-    image: 'illustrations/jojoo.jpg',
-    text: 'Jojo\'s Bizarre Adventure fanart. April 2022.',
-    // route: '../illustrations/jojo'
-  },
-  {
-    image: 'illustrations/aki.jpg',
-    text: 'Chainsaw Man fanart. April 2022.',
-    // route: '../illustrations/aki'
-  },
-  {
-    image: 'illustrations/delusion-childe.png',
-    text: 'Genshin Impact fanart. July 2021.',
-    // route: '../illustrations/childe-delusion'
-  },
-  {
-    image: 'illustrations/snow-childe.png',
-    text: 'Genshin Impact fanart. August 2021.',
-    // route: '../illustrations/childe-snow'
-  }
-];
-
 function About() {
   useEffect(() => {
     const getScroll = () => {
