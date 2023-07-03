@@ -19,30 +19,6 @@ export default function Gallery() {
       height: 2607,
     },
     {
-      id: 'thoma',
-      mediaUrl: '../img/illustrations/thoma.jpg',
-      title: 'Thoma',
-      description: 'Genshin Impact fanart. March 2021.',
-      width: 1186,
-      height: 1588,
-    },
-    {
-      id: 'delusion-childe',
-      mediaUrl: '../img/illustrations/delusion-childe.png',
-      title: 'Childe',
-      description: 'Genshin Impact fanart. July 2021.',
-      width: 2246,
-      height: 1558,
-    },
-    {
-      id: 'snow-childe',
-      mediaUrl: '../img/illustrations/snow-childe.png',
-      title: 'Childe',
-      description: 'Genshin Impact fanart. August 2021.',
-      width: 1772,
-      height: 1372,
-    },
-    {
       id: 'aki',
       mediaUrl: '../img/illustrations/aki.jpg',
       title: 'Aki',
@@ -86,7 +62,7 @@ export default function Gallery() {
 
   // Settings
   const settings = {
-    itemsPerRow: 3,
+    itemsPerRow: 4,
     imageMargin: 0,
     hoverOverlay: "ALL",
     imageWidth: 'auto',
@@ -116,7 +92,6 @@ export default function Gallery() {
     }
 
     const rows = [];
-    console.log(rows, 'rows');
 
     for (let i = 0; i < rowNum; i++) {
       rows.push(createRow(rowItems[i]));

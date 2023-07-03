@@ -901,6 +901,11 @@ h3 {
   font-size: 16px;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .section--active h1 {
   --h1-letter-spacing: -8px;
   animation: fadeInExpand 1s;
