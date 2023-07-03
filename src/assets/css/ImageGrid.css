@@ -1,0 +1,17 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 0px 10px;
+  grid-auto-rows: 10px;
+  max-width: 90vw;
+  transition: 0.3s;
+}
+.image-grid img {
+  width: 400px;
+  border-radius: 2%;
+}
+.image-grid img:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=imageGrid.css.map */

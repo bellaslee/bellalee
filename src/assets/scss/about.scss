@@ -1,0 +1,213 @@
+.intro {
+  .container {
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+  &__content {
+    width: 33%;
+  }
+
+  &__image {
+    width: 22%;
+    opacity: 0;
+  }
+}
+
+.hobby {
+  .container {
+    flex-direction: column;
+  }
+
+  &__content {
+    width: 39%;
+    align-self: flex-start;
+    margin-left: 24px;
+    margin-top: 24px;
+
+    h2 {
+      margin: 0%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    &__container {
+      :hover {
+        margin: 0%;
+        transform: scale(1.1);
+      }
+    }
+
+    &__caption {
+      text-align: center;
+    }
+
+    &__guitar {
+      animation: floatUp 3s ease infinite;
+      width: 25%;
+
+      .hobby__image__caption {
+        margin: -5% 30% 0% 0%;
+      }
+    }
+
+    &__illust {
+      animation: floatUp 3s ease infinite;
+      width: 28%;
+      margin: -20% -7% 0% -7%;
+
+      .hobby__image__caption {
+        margin: -20% 30% 0% 0%;
+      }
+    }
+
+    &__anime {
+      animation: floatUp 3s ease infinite;
+      width: 17%;
+      margin: 10% 0% 0% 0%;
+
+      .hobby__image__caption {
+        margin: -5% 0% 0% 0%;
+      }
+    }
+
+    &__coffee {
+      animation: floatDown 3s ease infinite;
+      width: 16%;
+      margin: 30% -2% 0% -3%;
+
+      .hobby__image__caption {
+        margin: -5% 0% 0% 0%;
+      }
+    }
+
+    &__singing {
+      animation: floatDown 3s ease infinite;
+      width: 23%;
+      margin: 25% -5% 0% -5%;
+
+      .hobby__image__caption {
+        margin: -25% 0% 0% 30%;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -3%;
+    width: 80%;
+  }
+}
+
+.blurb {
+  &__content {
+    width: 35%;
+  }
+
+  &__image {
+    width: 25%;
+    margin: 31% -1000px 0% 950px;
+  }
+}
+
+.illustrations {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    align-self: flex-start;
+    width: 46%;
+    margin-left: 24px;
+    margin-bottom: 0px;
+  }
+
+  & .container > p {
+    align-self: flex-start;
+    margin-left: 24px;
+  }
+}
+
+.section--active {
+  .intro__image {
+    --firstScale: 1;
+    --secondScale: 0.5;
+    --xTranslate: -25px;
+    --yTranslate: -50px;
+    --initialOpacity: 1;
+    --finalOpacity: 0;
+    animation: translateAndScale 1s ease infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  }
+
+  .blurb__image {
+    --firstScale: 1;
+    --secondScale: 1;
+    --xTranslate: -1000px;
+    --yTranslate: 0px;
+    --initialOpacity: 0;
+    --finalOpacity: 1;
+    animation: translateAndScale 1s ease infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  %center-items {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__image {
+      align-self: flex-start;
+      margin: 0 10px -20px 0;
+    }
+  }
+
+  .blurb {
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+      align-self: flex-start;
+      margin-top: 100%;
+    }
+  }
+
+  .hobby {
+    &__images {
+      flex-direction: column;
+    }
+
+    &__image {
+      &__guitar,
+      &__illust,
+      &__anime,
+      &__coffee,
+      &__singing {
+        margin: 15px;
+
+        .hobby__image__caption {
+          margin: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

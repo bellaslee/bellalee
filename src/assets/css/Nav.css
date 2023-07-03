@@ -1,0 +1,59 @@
+.nav__button {
+  position: fixed;
+  right: 6%;
+  top: 6%;
+  z-index: 20;
+}
+.nav__button:hover {
+  cursor: pointer;
+}
+
+.nav__icon-component {
+  margin-bottom: 13px;
+  display: block;
+  transition: 0.5s;
+}
+.nav__icon-component__top--active {
+  transform: rotate(45deg);
+}
+.nav__icon-component__bottom--active {
+  transform: translate(0.21px, -17.46px) rotate(-45deg);
+}
+
+.nav__menu {
+  background-color: rgba(72, 63, 63, 0.85);
+  color: #dcd7ce;
+  height: 100vh;
+  width: 66%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  transition: 0.5s;
+}
+.nav__menu--hidden {
+  transform: translate(100%, 0%);
+  visibility: hidden;
+}
+
+.nav__link-list {
+  font-size: 32px;
+  text-align: right;
+  margin-right: 20%;
+}
+.nav__link-list__item:hover {
+  font-size: 44px;
+}
+.nav__link-list a {
+  color: #dcd7ce !important;
+}
+
+.nav__link-list__item--current {
+  font-size: 44px;
+}
+
+/*# sourceMappingURL=nav.css.map */

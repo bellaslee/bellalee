@@ -1,0 +1,23 @@
+@use 'animations';
+
+.spacer {
+  width: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 48px !important;
+  margin-bottom: 48px !important;
+  display: block !important;
+  border: none !important;
+
+  &--active {
+    animation: spin 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -3s);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .spacer {
+    width: 50px;
+  }
+}
